@@ -1,0 +1,37 @@
+:root {
+  --cor-principal: #3f51b5;
+  --cor-secundaria: #c3d1f1;
+  --clara: #d2ddf5;
+  --bebe: #e1e8f8;
+  --diluida: #f0f4fc;
+  --base: #f7f9fe;
+}
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.container {
+  background-color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.categoria {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px 70px 90px;
+
+}
+
+.categoria-img {
+  height: 80px;
+  width: 80px;
+
+}
