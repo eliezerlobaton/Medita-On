@@ -21,6 +21,50 @@ html {
   max-width: 95%;
   margin: 0 auto;
   padding: 50px;
+  border-radius: 10px;
+
+}
+
+
+.principal{
+  width: 95%;
+  border: solid 2px var(--diluida);
+  padding: 0 35px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.navbar{
+  height: 45px;
+  display: flex;
+}
+.img-logo{
+  width: 300px;
+}
+.menu{
+  display: flex;
+  width: 320px;      
+  justify-content: space-around;
+  list-style-type: none;
+}
+.menu li a{
+  color:#3f51b5;
+  text-decoration: none;
+}
+.connect{
+  width: 315px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.connect p{
+  width: 65px;
+  height: 20px;
+  background-color:#3f51b5;
+  text-align: center;
+  border-radius: 10px;
+}
+.connect p a{
+  color: white;
+  text-decoration: none;
 }
 
 .categoria {
@@ -33,53 +77,4 @@ html {
 .categoria-img {
   height: 80px;
   width: 80px;
-}
-body {
-  margin: 0 auto;
-  width: 980px;
-    
-}
-.principal{
-    border: solid 5px #e4e4e4;
-    padding: 0 35px;
-}
-.navbar{
-    height: 45px;
-    display: flex;
-}
-.img-logo{
-    width: 300px;
-}
-.menu{
-    display: flex;
-    width: 320px;      
-    justify-content: space-around;
-    list-style-type: none;
-}
-.menu li a{
-    color:#3f51b5;
-    text-decoration: none;
-}
-.connect{
-    width: 315px;
-    display: flex;
-    flex-direction: row-reverse;
-}
-.connect p{
-    width: 65px;
-    height: 20px;
-    background-color:#3f51b5;
-    text-align: center;
-    border-radius: 10px;
-}
-.connect p a{
-    color: white;
-    text-decoration: none;
-}
-.banner{
-    height: 500px;
-    background-image: url("../img/opoderdayoga2.png");
-    background-repeat: no-repeat;
-    
-    
 }
