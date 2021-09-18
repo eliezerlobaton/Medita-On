@@ -15,6 +15,10 @@ html {
   box-sizing: inherit;
 }
 
+a {
+  text-decoration: none;
+}
+
 .container {
   background-color: var(--cor-secundaria);
   display: flex;
@@ -52,10 +56,48 @@ html {
   color: var(--cor-principal);
 }
 .texto-categoria {
-  /*margin: 0;*/
   text-align: start;
   color: var(--cor-principal);
 }
+
+/** entradas **/
+.container-entradas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /*border: 2px solid #000000;*/
+}
+.entrada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--diluida);
+  width: 100%;
+  border-radius: 15px;
+}
+
+
+.entrada-img {
+  height: 200px;
+  width: 200px;
+}
+
+.entrada-btn {
+  height: 25px;
+  width: 50%;
+  padding: 5px 15px;
+  margin: 10px;
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: 10px;
+  color: var(--clara);
+  text-align: center;
+}
+
 
 @media(min-width: 768px) {
   .container {
