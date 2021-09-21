@@ -210,7 +210,7 @@ html {
     height: 200px;
   }
 }
-* {
+/** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -308,7 +308,7 @@ html {
     color: #ffffff;
     position: absolute;
     
-  }
+  }*/
 
 footer {
   height: 80px;
