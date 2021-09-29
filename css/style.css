@@ -1,40 +1,40 @@
-/* variáveis */
-:root {
-  /* paleta de cores */
-  --cor-principal: #3f51b5;
-  --cor-secundaria: #c3d1f1;
+/* Variaveis */
+:root{
+  --cor-principal:#3f51b5;
+  --cor-secundaria:#c3d1f1;
   --cor-destaque: #278ba9;
-  --clara: #d2ddf5;
-  --bebe: #e1e8f8;
-  --diluida: #f0f4fc;
-  --base: #f7f9fe;
-  --fornte-padrao: "Rubik", "Nunito", "Ubuntu", "Lucida Sans", sans-serif;
-  --fonte-tamanho-padrao: 16px;
+  /* Vale ter tantas variaçoes de cores tao claras e tão semelhantes? isso é perceptivel ao usuario? */
+  --cor-clara: #d2ddf5;
+  --cor-bebe:#e1e8f8;
+  --cor-diluida:#f0f4fc;
+  --cor-base: #f7f9fe;
+  --fonte-padrao: 'Rubik', 'Nunito', 'Ubuntu', 'Lucida Sans', sans-serif;
+  --fonte-tamanho-padrao:16px;
   --padding-padrao: 16px;
   --padding-metade: calc(var(--padding-padrao) / 2);
   --padding-dobro: calc(var(--padding-padrao) * 2);
-  --border-radius-padrao: 10px;
-  --border-radius-metade: calc(var(--border-radius-padrao) / 2);
-  --border-radius-dobro: calc(var(--border-radius-padrao) * 2);
-  --sombra-prinicpal: drop-shadow(2px 2px 3px rgb(63 81 181 / 0.4));
-  --sombra-fina: drop-shadow(2px 2px 1px rgb(63 81 181 / 0.3));
+  --border-radius-padrao:10px;
+  --border-radius-metade:calc(var(--padding-padrao) / 2);
+  --border-radius-dobro:calc(var(--padding-padrao) * 2);
+  --sombra-principal: drop-shadow(2px 2px 3px rgb(63 81 181 / .4));
+  --sombra-fina: drop-shadow(2px 2px 1px rgb(63 81 181 / .3));
 }
 
 /* Reset */
 *,
-*::before,
-*::after {
+*::after,
+*::before {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 /* Geral (tags HTML) */
-body {
+body{
   align-items: stretch;
   display: flex;
   flex-flow: row wrap;
-  font-family: var(--fornte-padrao);
+  font-family: var(--fonte-padrao);
   font-size: var(--fonte-tamanho-padrao);
   justify-content: flex-start;
   max-width: 100vw;
@@ -43,43 +43,164 @@ body {
 }
 
 a {
-  color: inherit;
+  color:inherit;
   text-decoration: underline solid transparent 0;
   transition: filter .6s ease-in-out, text-decoration .6s ease-in-out, color .6s ease-in-out;
 }
 
 a:hover {
   color: var(--cor-destaque);
-  filter: var(--sombra-prinicpal);
+  filter: var(--sombra-principal);
   text-decoration: underline solid var(--cor-destaque) 2px;
-
 }
 
-header, aside, main, footer {
+ul {
+  list-style: none;
+  padding: 0;
+  margin: auto;
+}
+
+input {
+  border-radius: var(--border-radius-padrao);
+  border: none;
+  color: var(--cor-principal);
+  font-weight: bolder;
+  margin: 0 var(--padding-padrao);
+  padding: var(--padding-metade) var(--padding-padrao);
+}
+
+input::placeholder {
+  color: var(--cor-secundaria);
+}
+
+header,
+aside,
+main,
+footer {
   flex: 1 0 100%;
   min-width: calc(100vw - (var(--padding-dobro) * 2));
 }
 
+/* Gerais (classes) */
 .btn {
   background-color: var(--cor-principal);
   border: none;
   border-radius: var(--border-radius-metade);
+  color: #fff;
   cursor: pointer;
-  color: #ffffff;
   padding: var(--padding-metade) var(--padding-padrao);
   transition: background-color .6s ease-in-out, border-radius .6s ease-in-out;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: var(--cor-destaque);
   border-radius: var(--border-radius-padrao);
-  color: #ffffff;
+  color: #fff;
+}
+
+/* Navbar (classes)*/
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  height: 31px;
+  width: 200px;
+}
+
+.navbar__menu {
+  align-items: center;
+  display: flex;
+  flex: 1 1 calc(100% - 264px);
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.navbar__menu .menu__item {
+  color: var(--cor-principal);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: var(--padding-metade) 0 var(--padding-metade) var(--padding-padrao);
+  transition: filter .6s ease-in-out, text-decoration .6s ease-in-out;
+}
+
+.navbar__menu .menu__item a:not(.btn):hover,
+.navbar__menu .menuitem a:not(.navbar_logo):hover {
+  filter: var(--sombra-fina);
+  text-decoration: 2px solid underline;
+}
+
+/* Header (classes) */
+.header {
+  align-items: stretch;
+  background-color: rgba(255, 255, 255 , .85);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin: 0 -32px;
+  /* Problema de usar padding no body - nao conseguimos preencher de ponta a ponta sem margem negativa ou position absolute/fixed*/
+  padding: var(--padding-padrao);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.header__navbar {
+  height: 80px;
+}
+
+.search {
+  align-items: center;
+  background-color: var(--cor-clara);
+  background-image: url(../img/elementos-web-17.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--border-radius-dobro);
+  display: flex;
+  filter: var(--sombra-principal);
+  flex-flow: row nowrap;
+  height: 30vh;
+  justify-content: center;
+}
+
+.search .search__form {
+  background-color: var(--cor-secundaria);
+  border-radius: var(--border-radius-padrao);
+  display: flex;
+  filter: var(--sombra-principal);
+  flex: 0 1 75%;
+  flex-flow: row wrap;
+  max-width: 720px;
+  padding: var(--padding-dobro);
+}
+
+.search .search__form label {
+  color: var(--cor-principal);
+  font-weight: bold;
+  font-size: 1.33rem;
+}
+
+.search .search__form input {
+  flex: 1 1 auto;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin-right: 0;
+}
+
+.search .search__form button.btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin-left: 0;
 }
 
 .categories  {
   display: flex;
   flex-flow: row wrap;
-  background-color: var(--bebe);
+  background-color: var(--cor-bebe);
   border-radius: var(--border-radius-dobro);
   justify-content: space-around;
   margin: 64px 0;
@@ -106,7 +227,7 @@ header, aside, main, footer {
 }
 .categories .category .category__img-container {
   display: flex;
-  background-color: var(--diluida);
+  background-color: var(--cor-diluida);
   justify-items: center;
   flex-flow: column nowrap;
   padding: var(--padding-metade);
@@ -155,7 +276,7 @@ header, aside, main, footer {
 }
 
 .entries .entry .entry__img-container {
-  background-color: var(--bebe);
+  background-color: var(--cor-bebe);
   display: flex;
   justify-items: center;
   flex-flow: column nowrap;
