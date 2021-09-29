@@ -41,7 +41,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline solid transparent o;
+  text-decoration: underline solid transparent 0;
   transition: filter 0.6 ease-in-out, text-decoration 0.6s ease-in-out,
     color 0.6s ease-in-out;
 }
@@ -103,7 +103,7 @@ footer {
 
 /* banner */
 
-.abanner {
+.banner {
   color: var(--cor-base);
   text-decoration: underline solid transparent o;
   transition: filter 0.6 ease-in-out, text-decoration 0.6s ease-in-out,
@@ -156,14 +156,11 @@ footer {
 }
 
 @media (max-width: 600px) {
-  div {
-    color: blue;
-  }
+}
 
-  .banners .banner .banner__content {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    width: 100%;
-  }
+.banners .banner .banner__content {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
 }
