@@ -48,7 +48,7 @@ a {
 
 a:hover {
   color: var(--cor-destaque);
-  /* filter: var(--sombra-principal); */
+  filter: var(--sombra-principal);
   text-decoration: underline solid var(--cor-destaque) 2px;
 }
 
