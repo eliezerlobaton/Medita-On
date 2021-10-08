@@ -134,7 +134,7 @@ footer {
 
 /* banner */
 
-.banner {
+.abanner {
   color: var(--cor-base);
   text-decoration: underline solid transparent 0;
   transition: filter 0.6 ease-in-out, text-decoration 0.6s ease-in-out,
@@ -152,7 +152,7 @@ footer {
 
 .banners .banner {
   border-radius: var(--border-radius-dobro);
-  flex: 1 1 30%;
+  flex: 1 0 100%;
   position: relative;
 }
 
@@ -360,13 +360,11 @@ footer {
     display: flex;
     flex-direction: row;
   }
-}
-@media (max-width: 600px) {
-}
 
-.banners .banner .banner__content {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  width: 100%;
+  .banners .banner {
+    border-radius: var(--border-radius-dobro);
+    flex: 1 1 30%;
+    position: relative;
+    font-size: 1.2rem;
+  }
 }
