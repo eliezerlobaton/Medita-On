@@ -177,14 +177,14 @@ footer {
 
 /* footer */
 
-.footer {
+/* .footer {
   align-items: stretch;
   background-color: #fff;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   padding: var(--padding-padrao);
-}
+} */
 
 /* Header (classes) */
 .header {
@@ -194,7 +194,6 @@ footer {
   flex-flow: column nowrap;
   justify-content: flex-start;
   margin: 0 -32px;
-  /* Problema de usar padding no body - nao conseguimos preencher de ponta a ponta sem margem negativa ou position absolute/fixed*/
   padding: var(--padding-padrao);
   position: sticky;
   top: 0;

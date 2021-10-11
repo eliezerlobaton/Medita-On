@@ -1,0 +1,10 @@
+@import url("style.css");
+
+.footer {
+    align-items: stretch;
+    background-color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    padding: var(--padding-padrao);
+  }
