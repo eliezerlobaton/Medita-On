@@ -72,59 +72,58 @@
 
             </header>
 
-            <main id = "main-cadastro">
-                
-                <h1>Faça o seu cadastro</h1>
+            <main>
 
-                <form>
-                    
-                    <div class="full-box">
+                <section id="formulario">
 
-                        <label for="email">E-mail</label>
+                    <h1>Faça o seu cadastro</h1>
 
-                        <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
-                        
-                    </div>
+                     <form>
 
-                    <div class="half-box spacing">
+                         <div>
 
-                        <label for="name">Nome</label>
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id="email" placeholder="Digite seu e-mail" data-email-validate>
 
-                        <input type="text" name="name" id="name" placeholder="Digite seu nome">
+                        </div>
 
-                    </div>
+                        <div>
 
-                    <div class="half-box">
+                            <label for="name">Nome</label>
+                            <input type="text" name="name" id="name" placeholder="Digite seu nome" data-max-length="16">
 
-                        <label for="lastname">Sobrenome</label>
+                        </div>
 
-                        <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobrenome">
+                        <div>
 
-                    </div>
+                            <label for="lastname">Sobre nome</label>
+                            <input type="text" name="lastname" id="lastname" placeholder="Digite seu sobre nome">
 
-                    <div class="half-box spacing">
+                        </div>
 
-                      <label for="lastname">Senha</label>
+                        <div>
 
-                      <input type="password" name="password" id="password" placeholder="Digite sua senha">
+                            <label for="lastname">Senha</label>
+                            <input type="password" name="password" id="password" placeholder="Digite sua senha">
 
-                    </div>
+                        </div>
 
-                    <div class="half-box">
+                        <div>
 
-                      <label for="passconfirmation">Confirmação de senha</label>
+                            <label for="passconfirmation">Confirmação de senha</label>
+                            <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Confirme a senha" data-equal="password">
 
-                      <input type="password" name="passconfirmation" id="passwordconfirmation" placeholder="Digite novamente sua senha">
+                        </div>
 
-                    </div>
+                        <div>
 
-                    <div class="full-box">
+                            <input class="btn" type="submit" value="Registrar">
 
-                      <input id="btn-submit" type="submit" value="Registrar">
+                        </div>
 
-                    </div>
-                    
-                </form>
+                    </form>
+
+                </section>
 
             </main>
 

@@ -1,25 +1,60 @@
 @import url("style.css");
 
-input, label {
+* {
 
-  display: block;
-  outline: none;
-  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  border: none;
 
 }
 
-#main-cadastro {
+body {
+
+  padding-top: 5vh;
+  background-size: cover;
+  background-position-y: -150px;
+
+}
+
+main {
+  text-align: center;
+  width: 100%;
+  margin: 0px 0;
+}
+
+form {
+
+  display: inline-block;
+  width: 300px;
+
+}
+
+form label {
+  display:block;
+  font-size: 20px;
+}
+
+form input {
+  display: block;
+  margin: 0 0 20px;
+  padding: 10px 25px;
+  width: 100%;
+}
+
+#formulario {
 
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--cor-bebe);
   border-radius: 10px;
   padding: 25px;
+  background-color: var(--cor-diluida);
 
 }
 
-#main-cadastro h1 {
+#formulario h1 {
 
   text-align: center;
   margin-bottom: 25px;
@@ -27,39 +62,11 @@ input, label {
 
 }
 
-form {
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-}
-
-.full-box {
-
-  flex: 1 1 100%;
-  position: relative;
-
-}
-
-.half-box {
-
-  flex: 1 1 45%;
-  position: relative;
-
-}
-
-.spacing {
-
-  margin-right: 2.5%;
-
-}
-
 label {
 
   font-weight: bold;
   font-size: .8rem;
-  
+
 }
 
 input {
@@ -71,13 +78,8 @@ input {
 
 }
 
-input[type="submit"] {
+input:focus {
 
-  background-color: var(--cor-principal);
-  color: #FFF;
-  border: none;
-  border-radius: 20px;
-  height: 40px;
-  cursor: pointer;
+  border-color: #E60084;
 
 }
