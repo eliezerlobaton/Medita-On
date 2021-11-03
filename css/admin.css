@@ -1,0 +1,55 @@
+/* Navbar (classes)*/
+.navbar {
+  align-items: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  height: 31px;
+  width: 200px;
+}
+
+.navbar__menu {
+  align-items: center;
+  display: flex;
+  flex: 1 1 calc(100% - 264px);
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.navbar__menu .menu__item {
+  color: var(--cor-principal);
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: var(--padding-metade) 0 var(--padding-metade) var(--padding-padrao);
+  transition: filter 0.6s ease-in-out, text-decoration 0.6 ease-in-out;
+}
+
+.navbar__menu .menu__item a:not(.btn):hover,
+.navbar_menu .menu__item a:not(.navbar__logo):hover {
+  filter: var(--sombra-fina);
+  text-decoration: 2px solid underline;
+}
+
+
+
+/* Header (classes) */
+.header {
+  align-items: stretch;
+  background-color: rgba(255, 255, 255 , .85);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  margin: 0 -32px;
+  /* Problema de usar padding no body - nao conseguimos preencher de ponta a ponta sem margem negativa ou position absolute/fixed*/
+  padding: var(--padding-padrao);
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+.header__navbar {
+  height: 80px;
+}
