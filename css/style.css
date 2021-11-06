@@ -7,7 +7,7 @@
   --cor-diluida: #f0f4fc;
   --cor-base: #f7f9fe;
   --fonte-padrao: "Rubik", "Nunito", "Ubunto", "Lucida Sans", sans serif;
-  --fontse-tamanho-padrao: 16px;
+  --fonte-tamanho-padrao: 16px;
   --padding-padrao: 16px;
   --padding-metade: calc(var(--padding-padrao) / 2);
   --padding-dobro: calc(var(--padding-padrao) * 2);

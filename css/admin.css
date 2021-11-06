@@ -1,55 +1,103 @@
-/* Navbar (classes)*/
-.navbar {
-  align-items: center;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
+@import 'style.css';
+
+body {
+  padding: 0;
 }
 
-.navbar__logo {
-  height: 31px;
-  width: 200px;
+tr {
+  border-radius: var(--border-radius-dobro);
 }
 
-.navbar__menu {
-  align-items: center;
-  display: flex;
-  flex: 1 1 calc(100% - 264px);
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-}
-
-.navbar__menu .menu__item {
-  color: var(--cor-principal);
-  font-size: 1.2rem;
+th {
+  background-color: var(--cor-principal);
+  color: #ffffff;
+  text-transform: capitalize;
+  font-size: var(--fonte-tamanho-padrao);
   font-weight: bolder;
-  padding: var(--padding-metade) 0 var(--padding-metade) var(--padding-padrao);
-  transition: filter 0.6s ease-in-out, text-decoration 0.6 ease-in-out;
 }
 
-.navbar__menu .menu__item a:not(.btn):hover,
-.navbar_menu .menu__item a:not(.navbar__logo):hover {
-  filter: var(--sombra-fina);
-  text-decoration: 2px solid underline;
+td {
+  text-align: center;
 }
 
+.header{
+  margin: 0;
+  height: 64px;
+}
+/* * {
+  border: 1px solid black;
+} */
 
+.header .navbar{
+  height: 64px;
+}
+.navbar {
+  justify-content: center;
+}
 
-/* Header (classes) */
-.header {
-  align-items: stretch;
-  background-color: rgba(255, 255, 255 , .85);
+.admin {
+  height: calc(100vh - 64px);
+  background-color: var(--cor-secundaria);
+  width: 100%;
+}
+
+.admin .admin__menu{
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 64px);
+  width: 250px;
+}
+
+.admin .admin__panel{
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  margin: 0 -32px;
-  /* Problema de usar padding no body - nao conseguimos preencher de ponta a ponta sem margem negativa ou position absolute/fixed*/
-  padding: var(--padding-padrao);
-  position: sticky;
-  top: 0;
-  z-index: 3;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 25px;
+  background-color: var(--cor-bebe);
+  padding: 50px 0;
 }
 
-.header__navbar {
-  height: 80px;
+.admin .admin__panel .panel__crud {
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bolder;
+  width: 80%;
+}
+
+.crud-table {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.table__body {
+  width: 80%;
+  height: 60%;
+}
+
+.far {
+  margin-right: 15px;
+}
+
+
+@media only screen and (min-width: 730px) {
+  .admin {
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: var(--cor-secundaria);
+    width: 100%;
+  }
+
+  .admin .admin__menu{
+    display: flex;
+    
+  }
 }
