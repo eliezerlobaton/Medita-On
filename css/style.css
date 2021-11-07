@@ -12,8 +12,8 @@
   --padding-metade: calc(var(--padding-padrao) / 2);
   --padding-dobro: calc(var(--padding-padrao) * 2);
   --border-radius-padrao: 10px;
-  --border-radius-metade: calc(var(--padding-padrao-padrao) / 2);
-  --border-radius-dobro: calc(var(--padding-padrao-padrao) * 2);
+  --border-radius-metade: calc(var(--padding-padrao) / 2);
+  --border-radius-dobro: calc(var(--padding-padrao) * 2);
   --sombra-principal: drop-shadow(2px 2px 3px rgb(63 81 181 / 0.4));
   --sombra-fina: drob-shadow(2px 2px 1px rgb(63 81 181 / 0.3));
 }

@@ -14,19 +14,22 @@ th {
   text-transform: capitalize;
   font-size: var(--fonte-tamanho-padrao);
   font-weight: bolder;
+  padding: var(--padding-padrao) 0;
 }
 
 td {
   text-align: center;
+  background-color: var(--cor-diluida);
+  border-radius: var(--border-radius-padrao);
 }
 
 .header{
   margin: 0;
   height: 64px;
 }
-/* * {
+* {
   border: 1px solid black;
-} */
+}
 
 .header .navbar{
   height: 64px;
@@ -37,8 +40,8 @@ td {
 
 .admin {
   height: calc(100vh - 64px);
-  background-color: var(--cor-secundaria);
   width: 100%;
+  overflow: scroll;
 }
 
 .admin .admin__menu{
@@ -59,6 +62,7 @@ td {
   gap: 25px;
   background-color: var(--cor-bebe);
   padding: 50px 0;
+  height: 100%;
 }
 
 .admin .admin__panel .panel__crud {
@@ -76,28 +80,64 @@ td {
   justify-content: center;
   align-items: center;
   gap: 30px;
+  height: calc(100vh - 64px);
+}
+
+.table__title {
+  display: inline-block;
+  color: #ffffff;
+  background-color: var(--cor-destaque);
+  padding: 10px 20px;
+  border-radius: var(--border-radius-padrao);
 }
 
 .table__body {
   width: 80%;
-  height: 60%;
+  background-color: var(--cor-secundaria);
+  padding: 30px var(--padding-padrao);
+  border-radius: var(--border-radius-dobro);
 }
 
-.far {
-  margin-right: 15px;
+#phrases, #videos, #mantras, #classes, #articles, #podcasts, #date, #likes, #actions {
+  font-size: var(--padding-dobro);
+  border-radius: var(--border-radius-padrao);
 }
 
+.fa {
+  margin: 15px 0;
+}
+
+.fa-plus-circle {
+  margin: 0;
+  position: relative;
+  left: 150px;
+  color: var(--cor-destaque);
+}
+
+.fa-heart {
+  color: red
+}
 
 @media only screen and (min-width: 730px) {
   .admin {
     display: flex;
     flex-flow: row nowrap;
-    background-color: var(--cor-secundaria);
     width: 100%;
   }
 
   .admin .admin__menu{
     display: flex;
     
+  }
+  
+  .fa-eye, .fa-edit {
+  margin-right: 15px;
+  }
+  
+  .fa-plus-circle {
+    margin: 0;
+    position: relative;
+    left: 45%;
+    bottom: 50px;
   }
 }
