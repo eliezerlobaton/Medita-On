@@ -4,8 +4,16 @@ body {
   padding: 0;
 }
 
+table {
+  border-spacing: 5px;
+}
+
 tr {
   border-radius: var(--border-radius-dobro);
+}
+
+tr:nth-child(even){
+  background-color: var(--cor-clara);
 }
 
 th {
@@ -23,28 +31,29 @@ td {
   border-radius: var(--border-radius-padrao);
 }
 
-.header{
+.header {
   margin: 0;
   height: 64px;
 }
+
 * {
   border: 1px solid black;
 }
 
-.header .navbar{
+.header .navbar {
   height: 64px;
 }
+
 .navbar {
   justify-content: center;
 }
 
 .admin {
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   width: 100%;
-  overflow: scroll;
 }
 
-.admin .admin__menu{
+.admin .admin__menu {
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +62,10 @@ td {
   width: 250px;
 }
 
-.admin .admin__panel{
+.admin__mobile-menu {
+  height: 50px;
+}
+.admin .admin__panel {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -73,29 +85,34 @@ td {
   width: 80%;
 }
 
+.table {
+  overflow-x: auto;
+  width: 90vw;
+}
 .crud-table {
-  display: flex;
-  flex-flow: column wrap;
+  /* padding: 50px; */
+  position: relative;
   width: 100%;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 30px;
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px - 50px);
 }
 
 .table__title {
-  display: inline-block;
+  position: relative;
   color: #ffffff;
   background-color: var(--cor-destaque);
   padding: 10px 20px;
   border-radius: var(--border-radius-padrao);
+  max-width: 400px;
 }
 
 .table__body {
-  width: 80%;
+  width: 100%;
   background-color: var(--cor-secundaria);
   padding: 30px var(--padding-padrao);
   border-radius: var(--border-radius-dobro);
+  margin: 10px;
 }
 
 #phrases, #videos, #mantras, #classes, #articles, #podcasts, #date, #likes, #actions {
@@ -107,11 +124,15 @@ td {
   margin: 15px 0;
 }
 
+fa-bars {
+  font-size: 100px;
+}
+
 .fa-plus-circle {
-  margin: 0;
-  position: relative;
-  left: 150px;
   color: var(--cor-destaque);
+  align-self: flex-end;
+  font-size: 40px;
+  /* margin: 20px; */
 }
 
 .fa-heart {
@@ -124,20 +145,22 @@ td {
     flex-flow: row nowrap;
     width: 100%;
   }
-
-  .admin .admin__menu{
+  .admin .admin__menu {
     display: flex;
-    
   }
-  
   .fa-eye, .fa-edit {
-  margin-right: 15px;
+    margin-right: 15px;
+    font-size: 25px;
   }
-  
   .fa-plus-circle {
-    margin: 0;
-    position: relative;
-    left: 45%;
-    bottom: 50px;
+    font-size: 70px;
+    position: absolute;
+    right: 10px;
+    top: 50px;
   }
+  .admin__mobile-menu {
+    display: none;
+  }
+ 
+  
 }

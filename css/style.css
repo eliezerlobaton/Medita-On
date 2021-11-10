@@ -40,6 +40,10 @@ body{
   padding: 0 var(--padding-dobro);
 }
 
+main {
+  flex: 1 0 100%;
+}
+
 a {
   color:inherit;
   text-decoration: underline solid transparent 0;
@@ -72,8 +76,8 @@ input::placeholder {
 }
 
 header,
-aside,
-main,
+/* aside,
+main, */
 footer {
   flex: 1 0 100%;
   min-width: calc(100vw - (var(--padding-dobro) * 2));
