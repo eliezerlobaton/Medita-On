@@ -19,9 +19,13 @@ body {
 }
 
 main {
+
   text-align: center;
   width: 100%;
   margin: 0px 0;
+  justify-content: center;
+  align-items: center;
+
 }
 
 form {
@@ -50,7 +54,10 @@ form input {
   margin-right: auto;
   border-radius: 10px;
   padding: 25px;
+  justify-content: center;
+  align-items: center;
   background-color: var(--cor-diluida);
+  box-shadow: 5px 10px 20px var(--cor-principal);
 
 }
 
@@ -59,6 +66,7 @@ form input {
   text-align: center;
   margin-bottom: 25px;
   font-size: 1.6rem;
+  color: var(--cor-destaque);
 
 }
 
@@ -66,20 +74,51 @@ label {
 
   font-weight: bold;
   font-size: .8rem;
+  color: var(--cor-principal);
 
 }
 
 input {
 
-  border-bottom: 2px solid #323232;
+  border-bottom: 2px solid var(--cor-principal);
   padding: 10px;
   font-size: .9rem;
   margin-bottom: 40px;
 
 }
 
-input:focus {
+input::placeholder{
 
-  border-color: #E60084;
+  color: var(--cor-secundaria);
+
+}
+
+@media only screen and (max-width: 900px) {
+
+  #formulario {
+
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  form input{
+
+    width: 80%;
+
+  }
+
+  label{
+
+    text-align: left;
+
+  }
+
+  .btn{
+
+    width: 80%;
+
+  }
 
 }
