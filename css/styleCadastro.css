@@ -93,6 +93,12 @@ input::placeholder{
 
 }
 
+footer {
+
+  margin-top: 50px;
+
+}
+
 @media only screen and (max-width: 900px) {
 
   #formulario {
@@ -119,6 +125,12 @@ input::placeholder{
 
     width: 80%;
 
+  }
+
+  footer{
+
+    margin-top: 50px;
+  
   }
 
 }
