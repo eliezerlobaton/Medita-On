@@ -1,90 +1,246 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medita-on</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0">
-  <title>Medita-On</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <header class="header-nav">
-    <nav class="navbar">
-      <div class="img-logo">
-        <a href="index.html"><img
-            src="img/logo meditaon.png"
-            alt="Logo Meditaon"></a>
-
-      </div>
-
-
-      <ul class="menu">
-        <li><a href="#">Meditação</a></li>
-        <li><a href="#">Mantras</a></li>
-        <li><a href="#">Yoga</a></li>
-        <li><a href="#">Om</a></li>
-        <li><a href="#">Refletir</a></li>
-      </ul>
-
-
-      <div class="connect">
-        <p><a href="#">Conectar</a></p>
-      </div>
-    </nav>
-    <div class="banner-pesquisa">
-      <div class="pesquisa">
+  <body>
+    <header class="header">
+      <nav class="header__navbar navbar">
+        <a
+          class="navbar__logo"
+          href="index.html"
+          title="Acessar pagina inicial"
+        >
+          <img
+            src="img/logo-meditaon.png"
+            alt="Logo Meditaon"
+            width="200"
+            height="31"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Meditação">Meditação</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Mantras">Mantras</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Yoga">Yoga</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Om">Om</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Refletir">Refletir</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="conecte-se ao MeditaOn" class="btn">conectar</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <aside class="search">
+      <form class="search__form" action="" method="GET">
         <label for="search">Espiritualidade e saúde </label>
-        <input type="search" name="busca" id="busca"
-          placeholder="Pesquise aqui">
-        <button>Buscador</button>
+        <input type="search" name="search" id="search" placeholder="🔍" />
+        <button class="btn">Buscar</button>
+      </form>
+    </aside>
+    <main>
+      <section class="categories">
+        <article class="category">
+          <a href="#" title="Confira nossas Palestras" class="category__link">
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-ojo.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">palestras</h4>
+              <p class="category__description">Conheça o inconciente.</p>
+            </div>
+          </a>
+        </article>
+        <article class="category">
+          <a
+            href="#"
+            title="Ouça Nossos áudios e encontre-se"
+            class="category__link"
+          >
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-oreja.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">audios</h4>
+              <p class="category__description">A sua mente é poderosa.</p>
+            </div>
+          </a>
+        </article>
+        <article class="category">
+          <a
+            href="#"
+            title="Assista os videos de MeditaOn"
+            class="category__link"
+          >
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-play.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">Videos</h4>
+              <p class="category__description">Momento de Reflexão.</p>
+            </div>
+          </a>
+        </article>
+        <article class="category">
+          <a href="#" title="Saiba mais sobre Yoga" class="category__link">
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-yoga.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">Corpo São</h4>
+              <p class="category__description">Vinyasa Yoga.</p>
+            </div>
+          </a>
+        </article>
+      </section>
+      <section class="entries">
+        <article class="entry" title="Aliviar stresse">
+          <div class="entry__img-container">
+            <img
+              src="img/aliviar-estres.png"
+              alt="Aliviar stresse"
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Aliviar stresse" class="entry__link btn"
+            >Aliviar stresse</a
+          >
+        </article>
+        <article class="entry" title="Amor próprio">
+          <div class="entry__img-container">
+            <img
+              src="img/amor-propio.png"
+              alt="Amor próprio"
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Amor próprio" class="entry__link btn"
+            >Amor próprio</a
+          >
+        </article>
+        <article class="entry" title="Dormir bem ">
+          <div class="entry__img-container">
+            <img
+              src="img/dormir-bem.png"
+              alt="Dormir bem "
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Dormir bem " class="entry__link btn">Dormir bem</a>
+        </article>
+      </section>
+      <section class="banners">
+        <article class="banner banner--full">
+          <a href="#" class="abanner" title="O poder do yoga">
+            <img src="./img/banner-01.png" alt="" width="100%" height="auto" />
+            <div class="banner__content">
+              <h3 class="content__title">O poder do yoga</h3>
+              <p class="content__description">
+                Assita o video para melhorar a postura
+              </p>
+              <!-- <img
+                class="btn-banner"
+                src="./img/icono-play.png"
+                title="action"
+                rel="botao" 
+              /> -->
+            </div>
+          </a>
+        </article>
 
-      </div>
+        <article class="banner">
+          <a href="#" class="abanner" title="Um momento de paz">
+            <img src="./img/banner-02.png" alt="" width="100%" height="auto" />
+            <div class="banner__content">
+              <h3 class="content__title">Um momento de paz</h3>
+            </div>
+          </a>
+        </article>
 
-    </div>
+        <article class="banner">
+          <a href="#" class="abanner" title="Aula">
+            <img src="./img/banner-03.png" alt="" width="100%" height="auto" />
+            <div class="banner__content">
+              <h3 class="content__title">Aula</h3>
+            </div>
+          </a>
+        </article>
+      </section>
+    </main>
 
-  </header>
-  <section class="container">
-    <div class="categoria">
-      <a href="#"><img class="categoria-img"
-          src="img/elementos web-22.png" alt=""></a>
-      <div class="categoria-conteudo">
-        <h4 class="titulo-categoria">Palestras</h4>
-        <p class="texto-categoria">Conheça o inconciente.
-        </p>
-      </div>
-    </div>
-    <div class="categoria">
-      <a href="#"><img class="categoria-img"
-          src="img/elementos web-21.png" alt=""></a>
-      <div class="categoria-conteudo">
-        <h4 class="titulo-categoria">Audios</h4>
-        <p class="texto-categoria">A sua mente é poderosa.
-        </p>
-      </div>
-    </div>
-    <div class="categoria">
-      <a href="#"><img class="categoria-img"
-          src="img/elementos web-23.png" alt=""></a>
-      <div class="categoria-conteudo">
-        <h4 class="titulo-categoria">Videos</h4>
-        <p class="texto-categoria">Momento de reflexão,
-          encontro da paz.</p>
-      </div>
-    </div>
-    <div class="categoria">
-      <a href="#"><img class="categoria-img"
-          src="img/elementos web-24.png" alt=""></a>
-      <div class="categoria-conteudo">
-        <h4 class="titulo-categoria">Corpo Sano</h4>
-        <p class="texto-categoria">Vinyasa Yoga.</p>
-      </div>
-    </div>
-  </section>
-
-
-</body>
-
+    <footer>
+      <nav class="footer__navbar navbar">
+        <a
+          class="navbar__logo"
+          href="index.html"
+          title="Acessar página inicial"
+        >
+          <img
+            src="img/logo-meditaon.png"
+            alt="Logo Meditaon"
+            width="200"
+            height="31"
+          />
+        </a>
+        <ul class="navbar__menu">
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre Meditação">Meditação</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre yoga">Yoga</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre om">Om</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" title="Ver mais sobre refletir">Refletir</a>
+          </li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
 </html>
