@@ -28,14 +28,15 @@
           </button>
           <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
             <div class="navbar-nav text-center">
-              <a class="nav-link active" aria-current="page" href="#">Meditação</a>
-              <a class="nav-link" href="#">Mantras</a>
-              <a class="nav-link" href="#">Yoga</a>
-              <a class="nav-link" href="#">Om</a>
-              <a class="nav-link" href="#">Refletir</a>
+              <a class="nav-link header" aria-current="page" href="#">Meditação</a>
+              <a class="nav-link header" href="#">Mantras</a>
+              <a class="nav-link header" href="#">Yoga</a>
+              <a class="nav-link header" href="#">Om</a>
+              <a class="nav-link header" href="#">Refletir</a>
+              <a class="btn-header mobile" href="#">Conectar</a>
             </div>
           </div>
-          <div class="justify-content-end">
+          <div class="btn-connect justify-content-end">
             <div class="navbar-nav">
               <a class="btn-header" href="#">Conectar</a>
             </div>
@@ -43,6 +44,7 @@
         </div>
       </nav>
     </header>
+    <main>
     <aside class="search">
       <form class="search__form" action="" method="GET">
         <label for="search">Espiritualidade e saúde </label>
@@ -50,7 +52,8 @@
         <button class="btn">Buscar</button>
       </form>
     </aside>
-    <main>
+    
+     <div class="container">
       <section class="categories">
         <article class="category">
           <a href="#" title="Confira nossas Palestras" class="category__link">
@@ -129,6 +132,9 @@
           </a>
         </article>
       </section>
+     </div>
+
+     <div class="container">
       <section class="entries">
         <article class="entry" title="Aliviar stresse">
           <div class="entry__img-container">
@@ -171,46 +177,44 @@
           <a href="#" title="Dormir bem " class="entry__link btn">Dormir bem</a>
         </article>
       </section>
-      <section class="banners">
-        <div class="container">
+    </div>
 
-        <article class="banner banner--full">
-          <a href="#" class="abanner" title="O poder do yoga">
-            <img src="./img/banner-01.png" alt="" width="100%" height="auto" />
-            <div class="banner__content">
-              <h3 class="content__title">O poder do yoga</h3>
-              <p class="content__description">
-                Assita o video para melhorar a postura
-              </p>
-              <!-- <img
-                class="btn-banner"
-                src="./img/icono-play.png"
-                title="action"
-                rel="botao" 
-              /> -->
-            </div>
-          </a>
-        </article>
-
-        <article class="banner">
-          <a href="#" class="abanner" title="Um momento de paz">
-            <img src="./img/banner-02.png" alt="" width="100%" height="auto" />
-            <div class="banner__content">
-              <h3 class="content__title">Um momento de paz</h3>
-            </div>
-          </a>
-        </article>
-
-        <article class="banner">
-          <a href="#" class="abanner" title="Aula">
-            <img src="./img/banner-03.png" alt="" width="100%" height="auto" />
-            <div class="banner__content">
-              <h3 class="content__title">Aula</h3>
-            </div>
-          </a>
-        </article>
+    <div class="container banners">
+      
+      <article class="banner__one">
+        <img src="./img/banner-01.png" alt="Imagem Assita o video O poder do yoga" width="100%" height="auto" />
+        <div class="bannerOne__content">
+          <h3>O poder do yoga</h3>
+          <p>para melhorar a postura.</p>
+          <a href="#" title="Assita o video O poder do yoga"> Assita o video </a>
         </div>
-      </section>
+      </article>
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-12">
+          <article class="banner__two">
+            <img src="./img/banner-02.png" alt="" width="100%" height="auto" />
+            <div class="bannerTwo__content">
+              <h3>Um momento de paz</h3>
+              <p>para você relaxar.</p>
+              <a href="#" title="Confira">Confira</a>
+            </div>
+          </article>
+        </div> <!-- col-lg-6 col-md-6 col-12 -->
+        <div class="col-lg-6 col-md-12 col-12">
+          <article class="banner__three">
+            <img src="./img/banner-03.png" alt="" width="100%" height="auto" />
+            <div class="bannerThree__content">
+              <h3>Aulas</h3>
+              <p>para você meditar.</p>
+              <a href="#" title="Agende um horário.">Agende um horário.</a>
+            </div>
+          </article>
+        </div> <!-- col-lg-6 col-md-6 col-12 -->
+      </div> <!-- row -->
+
+      </div>
+
     </main>
 
     <footer>
@@ -222,7 +226,7 @@
           <div class="col-lg-6 col-md-8 col-12">
             <ul class="nav justify-content-end">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Meditação</a>
+                <a class="nav-link" href="#">Meditação</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Mantras</a>
@@ -239,9 +243,6 @@
             </ul>
           </div>
         </div>
-
-     
-
     </div>
     </footer>
   </body>
