@@ -1,0 +1,66 @@
+/* BADGES */
+.badge::before {
+  content: attr(data-badge);
+  background-color: var(--dark);
+  border: 1px solid var(--light);
+  border-radius: var(--border-radius);
+  color: var(--light);
+  font-family: var(--font-btn);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: calc(1rem * 1.25);
+  margin: var(--spacing-half);
+  padding: calc(var(--spacing-half)/2) var(--spacing-half);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.badge.badge-primary::before {
+  background-color: var(--primary);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-secondary::before {
+  background-color: var(--secondary);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-tertiary::before {
+  background-color: var(--tertiary);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-success::before {
+  background-color: var(--success);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-warning::before {
+  background-color: var(--warning);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-alert::before {
+  background-color: var(--alert);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-dark::before {
+  background-color: var(--dark);
+  border: 1px solid var(--light);
+  color: var(--light);
+}
+
+.badge.badge-light::before {
+  background-color: var(--light);
+  border: 1px solid var(--dark);
+  color: var(--dark);
+}

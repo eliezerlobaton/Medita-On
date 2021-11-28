@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0, minimum-scale=1.0">
+  <title><%= titulo %> | Jeff Co.</title>
+  <meta name="title" content="<%= titulo %> | Jeff Co.">
+  <meta name="description" content="<%= titulo %> | <%= subtitulo %>">
+  <link rel="preload" href="/stylesheets/style.css" as="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link defer href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito+Sans:wght@400;700&family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="icon" sizes="512x512" href="/favicon.ico" />
+</head>
+<% if(locals.usuarioLogado && locals.usuarioLogado.admin && locals.usuarioLogado.admin === true) { %>
+
+<body class="admin">
+  <% } else { %>
+
+  <body>
+    <% } %>

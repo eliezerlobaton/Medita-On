@@ -1,0 +1,14 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main class="bg-light">
+  <section class="bg-light">
+    <h1 class="primary"><%= titulo %></h1>
+    <p class="primary-dark flex-item-full-row"><%= subtitulo %></p>
+  </section>
+  <section id="usuarios" class="bg-tertiary-light">
+    <h2 class="tertiary flex-item-full-row"><%= subtitulo %></h2>
+    <p class="tertiary-dark text-center text-bolder flex-item-full-row">Total de Usuários: <%= usuarios.length %>.</p>
+    <%- include('./partials/usersTable') %>
+  </section>
+</main>
+<%- include('./partials/footer') %>

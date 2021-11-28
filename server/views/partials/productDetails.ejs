@@ -1,0 +1,36 @@
+<article id="productDetails<%= produto.id %>" class="card card--img-full<%= produto.precoPromo ? ' badge badge-primary' : '' %>" data-badge="PROMO">
+  <div class="card__img-container rounded border-tertiary">
+    <img src="<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" width="146" height="146">
+  </div>
+  <div class="card__content-container">
+    <div class="card__tags">
+      <small class="tag bg-tertiary-light"><%= produto.categoria %></small>
+      <small class="tag bg-tertiary-light"><%= produto.marca %></small>
+    </div>
+    <h3 class="card__title"><%= produto.nome %></h3>
+    <span class="flex-item-full-row">SKU <%= produto.sku.toUpperCase() %></span>
+    <br>
+    <div class="card__prices">
+      <% if (produto.precoPromo) { %>
+      <strike class="card__price--old"><%= produto.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></strike>
+      <h5 class="card__price"><%= produto.precoPromo.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></h5>
+      <% } else { %>
+      <h5 class="card__price"><%= produto.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></h5>
+      <% } %>
+    </div>
+    <div class="card__description">
+      <h4>Descrição</h4>
+      <p><%= produto.descricao %></p>
+      <% if(produto.videoId) { %>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= produto.videoId %>" title="<%= produto.nome %>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <% } %>
+    </div>
+    <div class="card__specifications">
+      <h4 class="dark">Especificações</h4>
+      <%- include('./productTable.ejs') %>
+    </div>
+    <div class="btn-group btn-group--center">
+      <a href="/produtos" class="btn btn--tertiary-dark">Ver Todos</a>
+    </div>
+  </div>
+</article>

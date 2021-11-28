@@ -1,0 +1,6 @@
+body>footer {
+  background-color: var(--dark);
+  border-top: var(--border-secondary);
+  border-width: var(--border-width-lg);
+  color: var(--light);
+}

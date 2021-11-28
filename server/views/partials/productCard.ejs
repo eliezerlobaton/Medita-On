@@ -1,0 +1,23 @@
+<% for(let produto of produtos) { %>
+<article id="productCard<%= produto.id %>" class="card card--img-full<%= produto.precoPromo ? ' badge badge-primary' : '' %>" data-badge="PROMO">
+  <div class="card__img-container rounded">
+    <img src="<%= produto.imagem %>" alt="Imagem do produto <%= produto.nome %>" width="146" height="146">
+  </div>
+  <div class="card__content-container">
+    <small class="bg-tertiary-light"><%= produto.categoria %></small> <small class="bg-tertiary-light"><%= produto.marca %></small>
+    <h4 class="card__title"><%= produto.nome %></h4>
+    <span class="flex-item-full-row">SKU <%= produto.sku.toUpperCase() %></span>
+    <br>
+    <% if (produto.precoPromo) { %>
+    <strike class="card__price--old"><%= produto.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></strike>
+    <h5 class="card__price"><%= produto.precoPromo.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></h5>
+    <% } else { %>
+    <h5 class="card__price"><%= produto.preco.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) %></h5>
+    <% } %>
+    <p class="card__description"><%= produto.descricao %> Saiba mais.</p>
+    <div class="btn-group btn-group--center">
+      <a href="/produtos/<%= produto.id %>" class="btn btn--tertiary-dark">Ver Detalhes</a>
+    </div>
+  </div>
+</article>
+<% } %>

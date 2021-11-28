@@ -1,0 +1,16 @@
+body>section {
+  margin: 0 auto;
+  padding: var(--spacing-quatruple) var(--spacing-double);
+}
+
+body>section:last-of-type {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  min-width: 100%;
+  padding: var(--spacing-double);
+  width: 100%;
+}
+
+body>section:last-of-type h2 {
+  color: var(--primary-light);
+}

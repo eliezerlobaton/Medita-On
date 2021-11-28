@@ -1,0 +1,38 @@
+<article class="card">
+  <div class="card__content-container">
+    <table class="bg-light">
+      <thead class="bg-tertiary-light">
+        <tr>
+          <th>ID</th>
+          <th>Imagem</th>
+          <th>Nome</th>
+          <th>Preço</th>
+          <th>SKU</th>
+          <th>Marca</th>
+          <th>Categoria</th>
+          <th>Controles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(let produto of produtos) { %>
+        <tr>
+          <td data-title="ID"><%= produto.id || '0' %></td>
+          <td data-title="Imagem"> <img src="<%= produto.imagem%>" alt="Thumb <%= produto.nome %>" width="48" height="48"></td>
+          <td data-title="Nome"><%= produto.nome || '' %></td>
+          <td data-title="Preço"><%= produto.precoPromo ? 'de ' + produto.preco : produto.preco %><%= produto.precoPromo && ' por ' + produto.precoPromo %></td>
+          <td data-title="SKU"><%= produto.sku || '' %></td>
+          <td data-title="Marca"><%= produto.marca || '' %></td>
+          <td data-title="Categoria"><%= produto.categoria || '' %></td>
+          <td data-title="Controles">
+            <div class="btn-group btn-group--center">
+              <a href="/produtos/<%= produto.id %>" target="_blank" rel="noopener noreferrer" class="btn btn--tertiary" title="Ver perfil">&#128065;</a>
+              <a href="/produtos/<%= produto.id %>/editar" class="btn btn--primary btn--disabled" title="Editar perfil" disabled>&#9998;</a>
+              <a href="/produtos/<%= produto.id %>/excluir" class="btn btn--secondary btn--disabled" title="Excluir perfil" disabled>&#128465;</a>
+            </div>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</article>

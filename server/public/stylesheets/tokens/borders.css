@@ -1,0 +1,159 @@
+:root {
+  /*
+   * Raio de Borda (border-radius) 
+   */
+
+  /* Tamanhos de Bordas */
+  --border-radius: 8px;
+  --border-radius-half: calc(var(--border-radius)/2);
+  --border-radius-double: calc(var(--border-radius)*2);
+
+  /* Borda arredondada em uma quina única */
+  --border-radius-1: var(--border-radius) 0 0 0;
+  --border-radius-2: 0 var(--border-radius) 0 0;
+  --border-radius-3: 0 0 var(--border-radius) 0;
+  --border-radius-4: 0 0 0 var(--border-radius);
+
+  /* Bordas arredondadas em uma aresta */
+  --border-radius-bottom: 0 0 var(--border-radius) var(--border-radius);
+  --border-radius-left: var(--border-radius) 0 0 var(--border-radius);
+  --border-radius-top: var(--border-radius) var(--border-radius) 0 0;
+  --border-radius-right: 0 var(--border-radius) var(--border-radius) 0;
+
+  /* Borda arredondada exceto em uma quina única */
+  --border-radius-quina-1: 0 var(--border-radius) var(--border-radius) var(--border-radius);
+  --border-radius-quina-2: var(--border-radius) 0 var(--border-radius) var(--border-radius);
+  --border-radius-quina-3: var(--border-radius) var(--border-radius) 0 var(--border-radius);
+  --border-radius-quina-4: var(--border-radius) var(--border-radius) var(--border-radius) 0;
+
+  /* Borda arredondada exceto em uma aresta única */
+  --border-radius-quina-bottom: var(--border-radius) var(--border-radius) 0 0;
+  --border-radius-quina-left: 0 var(--border-radius) var(--border-radius) 0;
+  --border-radius-quina-top: 0 0 var(--border-radius) var(--border-radius);
+  --border-radius-quina-right: var(--border-radius) 0 0 var(--border-radius);
+
+  /* Borda (meio raio) arredondada em uma quina única */
+  --border-radius-half-1: var(--border-radius-half) 0 0 0;
+  --border-radius-half-2: 0 var(--border-radius-half) 0 0;
+  --border-radius-half-3: 0 0 var(--border-radius-half) 0;
+  --border-radius-half-4: 0 0 0 var(--border-radius-half);
+
+  /* Bordas (meio raio) arredondadas em uma aresta */
+  --border-radius-half-bottom: 0 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-half-left: var(--border-radius-half) 0 0 var(--border-radius-half);
+  --border-radius-half-top: var(--border-radius-half) var(--border-radius-half) 0 0;
+  --border-radius-half-right: 0 var(--border-radius-half) var(--border-radius-half) 0;
+
+  /* Borda (meio raio) arredondada exceto em uma quina única */
+  --border-radius-quina-half-1: 0 var(--border-radius-half) var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-2: var(--border-radius-half) 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-3: var(--border-radius-half) var(--border-radius-half) 0 var(--border-radius-half);
+  --border-radius-quina-half-4: var(--border-radius-half) var(--border-radius-half) var(--border-radius-half) 0;
+
+  /* Borda (meio raio) arredondada exceto em uma aresta única */
+  --border-radius-quina-half-bottom: var(--border-radius-half) var(--border-radius-half) 0 0;
+  --border-radius-quina-half-left: 0 var(--border-radius-half) var(--border-radius-half) 0;
+  --border-radius-quina-half-top: 0 0 var(--border-radius-half) var(--border-radius-half);
+  --border-radius-quina-half-right: var(--border-radius-half) 0 0 var(--border-radius-half);
+
+  /* Borda (raio dobrado) arredondada em uma quina única */
+  --border-radius-double-1: var(--border-radius-double) 0 0 0;
+  --border-radius-double-2: 0 var(--border-radius-double) 0 0;
+  --border-radius-double-3: 0 0 var(--border-radius-double) 0;
+  --border-radius-double-4: 0 0 0 var(--border-radius-double);
+
+  /* Bordas (raio dobrado) arredondadas em uma aresta */
+  --border-radius-double-bottom: 0 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-double-left: var(--border-radius-double) 0 0 var(--border-radius-double);
+  --border-radius-double-top: var(--border-radius-double) var(--border-radius-double) 0 0;
+  --border-radius-double-right: 0 var(--border-radius-double) var(--border-radius-double) 0;
+
+  /* Borda (raio dobrado) arredondada exceto em uma quina única */
+  --border-radius-quina-double-1: 0 var(--border-radius-double) var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-2: var(--border-radius-double) 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-3: var(--border-radius-double) var(--border-radius-double) 0 var(--border-radius-double);
+  --border-radius-quina-double-4: var(--border-radius-double) var(--border-radius-double) var(--border-radius-double) 0;
+
+  /* Borda (raio dobrado) arredondada exceto em uma aresta única */
+  --border-radius-quina-double-bottom: var(--border-radius-double) var(--border-radius-double) 0 0;
+  --border-radius-quina-double-left: 0 var(--border-radius-double) var(--border-radius-double) 0;
+  --border-radius-quina-double-top: 0 0 var(--border-radius-double) var(--border-radius-double);
+  --border-radius-quina-double-right: var(--border-radius-double) 0 0 var(--border-radius-double);
+
+  /* Borda arredondada (aplicar em elementos quadrangulares para que fique circular) */
+  --border-radius-50: 50%;
+
+  /*
+   * Espessuras de Bordas (border-width) 
+   */
+  --border-width: 1px;
+  --border-width-md: 2px;
+  --border-width-lg: 4px;
+
+  /*
+   * Estilos de Bordas (border-style) 
+   */
+  --border-style: solid;
+  --border-style-dashed: dashed;
+  --border-style-dotted: dotted;
+
+  /*
+   * Cores Bordas (border-color) 
+   */
+  --border-color: var(--dark);
+  --border-color-primary-light: var(--primary-light);
+  --border-color-primary: var(--primary);
+  --border-color-primary-dark: var(--primary-dark);
+  --border-color-secondary-light: var(--secondary-light);
+  --border-color-secondary: var(--secondary);
+  --border-color-secondary-dark: var(--secondary-dark);
+  --border-color-tertiary-light: var(--tertiary-light);
+  --border-color-tertiary: var(--tertiary);
+  --border-color-tertiary-dark: var(--tertiary-dark);
+  --border-color-white: var(--white);
+  --border-color-light: var(--light);
+  --border-color-neutral-light: var(--neutral-light);
+  --border-color-neutral: var(--neutral);
+  --border-color-neutral-dark: var(--neutral-dark);
+  --border-color-dark: var(--dark);
+  --border-color-black: var(--black);
+  --border-color-success-light: var(--success-light);
+  --border-color-success: var(--success);
+  --border-color-success-dark: var(--success-dark);
+  --border-color-warning-light: var(--warning-light);
+  --border-color-warning: var(--warning);
+  --border-color-warning-dark: var(--warning-dark);
+  --border-color-alert-light: var(--alert-light);
+  --border-color-alert: var(--alert);
+  --border-color-alert-dark: var(--alert-dark);
+
+  /*
+   * Shorthand Bordas (border-width, border-style e border-color) 
+   */
+  --border: var(--border-width) var(--border-style) var(--dark);
+  --border-primary-light: var(--border-width) var(--border-style) var(--primary-light);
+  --border-primary: var(--border-width) var(--border-style) var(--primary);
+  --border-primary-dark: var(--border-width) var(--border-style) var(--primary-dark);
+  --border-secondary-light: var(--border-width) var(--border-style) var(--secondary-light);
+  --border-secondary: var(--border-width) var(--border-style) var(--secondary);
+  --border-secondary-dark: var(--border-width) var(--border-style) var(--secondary-dark);
+  --border-tertiary-light: var(--border-width) var(--border-style) var(--tertiary-light);
+  --border-tertiary: var(--border-width) var(--border-style) var(--tertiary);
+  --border-tertiary-dark: var(--border-width) var(--border-style) var(--tertiary-dark);
+  --border-white: var(--border-width) var(--border-style) var(--white);
+  --border-light: var(--border-width) var(--border-style) var(--light);
+  --border-neutral-light: var(--border-width) var(--border-style) var(--neutral-light);
+  --border-neutral: var(--border-width) var(--border-style) var(--neutral);
+  --border-neutral-dark: var(--border-width) var(--border-style) var(--neutral-dark);
+  --border-dark: var(--border-width) var(--border-style) var(--dark);
+  --border-black: var(--border-width) var(--border-style) var(--black);
+  --border-success-light: var(--border-width) var(--border-style) var(--success-light);
+  --border-success: var(--border-width) var(--border-style) var(--success);
+  --border-success-dark: var(--border-width) var(--border-style) var(--success-dark);
+  --border-warning-light: var(--border-width) var(--border-style) var(--warning-light);
+  --border-warning: var(--border-width) var(--border-style) var(--warning);
+  --border-warning-dark: var(--border-width) var(--border-style) var(--warning-dark);
+  --border-alert-light: var(--border-width) var(--border-style) var(--alert-light);
+  --border-alert: var(--border-width) var(--border-style) var(--alert);
+  --border-alert-dark: var(--border-width) var(--border-style) var(--alert-dark);
+}

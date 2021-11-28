@@ -1,0 +1,82 @@
+table {
+  margin: var(--spacing-double) auto;
+  width: -webkit-fill-available;
+}
+
+tbody tr:not(:last-of-type)::after {
+  content: '';
+  border-bottom: var(--border-tertiary);
+  margin-bottom: var(--spacing-double);
+  padding: var(--spacing);
+  display: block;
+}
+
+tr {
+  margin-bottom: var(--spacing-double);
+  padding: var(--spacing);
+}
+
+tr th,
+tr td {
+  line-height: var(--font-lg);
+  padding: var(--spacing-half) var(--spacing);
+  text-align: left;
+}
+
+tr th {
+  display: none;
+}
+
+tr td {
+  display: block;
+}
+
+tr td::before {
+  content: attr(data-title) ': ';
+  font-size: var(--font-sm);
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 640px) {}
+
+@media only screen and (min-width: 768px) {
+  tbody tr:not(:last-of-type)::after {
+    content: none;
+  }
+
+  tr {
+    border-bottom: none;
+    margin-bottom: auto;
+  }
+
+  tr td:first-child {
+    font-weight: bold;
+    text-align: left;
+  }
+
+  tr th,
+  tr td {
+    display: table-cell;
+    line-height: var(--font-lg);
+    padding: var(--spacing-half) var(--spacing);
+    text-align: center;
+  }
+
+  tr td::before {
+    content: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1041px) {
+  table {
+    max-width: 1080px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1920px) {}

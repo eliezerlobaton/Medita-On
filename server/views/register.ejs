@@ -1,0 +1,180 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main class="bg-light">
+
+  <section>
+    <h1 class="primary"><%= titulo %></h1>
+    <p class="primary-dark flex-item-full-row"><%= subtitulo %></p>
+  </section>
+
+  <section id="cadastro" class="bg-secondary-dark">
+    <% if(!locals.usuarioLogado) { %>
+    <h2>Cadastre-se</h2>
+    <% } else { %>
+    <div class="flex-item-full-row">
+      <% if(!usuarioLogado.avatar) { %>
+      <svg xmlns="http://www.w3.org/2000/svg" width="146" height="146" viewBox="0 0 24 24" fill="var(--secondary-light)">
+        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7.753 18.305c-.261-.586-.789-.991-1.871-1.241-2.293-.529-4.428-.993-3.393-2.945 3.145-5.942.833-9.119-2.489-9.119-3.388 0-5.644 3.299-2.489 9.119 1.066 1.964-1.148 2.427-3.393 2.945-1.084.25-1.608.658-1.867 1.246-1.405-1.723-2.251-3.919-2.251-6.31 0-5.514 4.486-10 10-10s10 4.486 10 10c0 2.389-.845 4.583-2.247 6.305z" />
+      </svg>
+      <% } else { %>
+      <img class="rounded" src="<%= usuarioLogado.avatar %>" alt="Avatar de <%= usuarioLogado.nome %> <%= usuarioLogado.sobrenome %>" width="146" height="146">
+      <% } %>
+    </div>
+    <h2>Olá, <%= usuarioLogado.nome %></h2>
+    <p class="flex-item-full-row">Atualize o formulário e clique em 'Enviar' para atualizar seus dados.</p>
+    <% } %>
+    <article>
+      <form action="<%= locals.usuarioLogado ? '/acesso/cadastro/' + usuarioLogado.id : '' %>" id="cadastroForm" method="POST">
+        <input type="hidden" name="id" value="<%= locals.usuarioLogado ? '/' + usuarioLogado.id : '' %>">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div class="input-group">
+            <input type="text" id="nome" name="nome" placeholder="Fulano" required value="<%= locals.usuarioLogado && usuarioLogado.nome %>">
+            <label for="nome">Nome</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="sobrenome" name="sobrenome" placeholder="de Tal" required value="<%= locals.usuarioLogado && usuarioLogado.sobrenome %>">
+            <label for="sobrenome">Sobrenome</label>
+          </div>
+          <div class="input-group">
+            <input type="text" id="apelido" name="apelido" placeholder="Fulanito" value="<%= locals.usuarioLogado && usuarioLogado.apelido %>">
+            <label for="apelido">Apelido</label>
+          </div>
+          <div class="input-group">
+            <input type="date" id="nascimento" name="nascimento" required value="<%= locals.usuarioLogado && usuarioLogado.nascimento %>">
+            <label for="nascimento">Data de Nascimento</label>
+          </div>
+          <div class="input-group">
+            <input type="number" id="idade" name="idade" min="18" max="150" step="1" placeholder="50" value="<%= locals.usuarioLogado && usuarioLogado.idade %>">
+            <label for="idade">Idade</label>
+          </div>
+          <% if(locals.usuarioLogado) { %>
+          <div class="input-group">
+            <input type="password" id="senha" name="senha" placeholder="Se quiser alterar" value="">
+            <label for="senha">Senha</label>
+          </div>
+          <% } else { %>
+          <div class="input-group">
+            <input type="password" id="senha" name="senha" placeholder="UmaS3nhaF0rt3!" required value="<%= locals.usuarioLogado && usuarioLogado.senha %>">
+            <label for="senha">Senha</label>
+          </div>
+          <% } %>
+          <div class="input-group">
+            <input type="color" id="corPreferida" name="corPreferida" value="<%= locals.usuarioLogado && usuarioLogado.corPreferida %>">
+            <label for="corPreferida">Cor Preferida</label>
+          </div>
+          <div class="input-group">
+            <script>
+              window.onload = () => {
+                const fileInputs = document.querySelectorAll('input[type="file"]')
+                const updateTip = (tipTag, tipValue) => {
+                  tipTag.innerText = tipValue.replace('C:\\fakepath\\', '')
+                  return
+                }
+                for (let fileInput of fileInputs) {
+                  const id = fileInput.getAttribute('id')
+                  const tipTag = document.querySelector(`#${id}Tip`)
+                  fileInput.onchange = () => updateTip(tipTag, fileInput.value)
+                }
+              }
+            </script>
+            <input type="file" id="avatar" name="avatar" accept=".jpg, .png, .gif" value="<%= locals.usuarioLogado && usuarioLogado.avatar %>">
+            <label for="avatar">Avatar</label>
+            <small id="avatarTip">Nenhum arquivo selecionado</small>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Dados de Contato</legend>
+          <div class="input-group">
+            <input type="email" id="email" name="email" placeholder="fulanito@gmail.com" required value="<%= locals.usuarioLogado && usuarioLogado.email %>">
+            <label for="email">email</label>
+          </div>
+          <div class="input-group">
+            <input type="tel" id="telefone" name="telefone" placeholder="+5511987654321" required value="<%= locals.usuarioLogado && usuarioLogado.telefone %>">
+            <label for="telefone">Telefone</label>
+          </div>
+          <div class="input-group">
+            <input type="datetime-local" id="dataParaContato" name="dataParaContato" value="<%= locals.usuarioLogado && usuarioLogado.dataParaContato %>">
+            <label for="dataParaContato">Melhor dia e hora para contato</label>
+          </div>
+          <div>
+            <p class="flex-item-full-row">Como prefere que te contatemos?</p>
+            <div class="input-group input-group--radio">
+              <div>
+                <input type="radio" id="formaContatoWhatsapp" name="formaContato" value="Whatsapp" checked="<%= locals.usuarioLogado && usuarioLogado.formaContato === 'Whatsapp' && 'checked' %>">
+                <label for="formaContatoWhatsapp">Whatsapp</label>
+              </div>
+              <div>
+                <input type="radio" id="formaContatoLigacao" name="formaContato" value="Ligação" checked="<%= locals.usuarioLogado && usuarioLogado.formaContato === 'Ligação' && 'checked' %>">
+                <label for="formaContatoLigacao">Ligação</label>
+              </div>
+              <div>
+                <input type="radio" id="formaContatoEmail" name="formaContato" value="Email" checked="<%= locals.usuarioLogado && usuarioLogado.formaContato === 'Email' && 'checked' %>">
+                <label for="formaContatoEmail">Email</label>
+              </div>
+            </div>
+          </div>
+          <div>
+            <p>Como prefere que te chamemos?</p>
+            <div class="input-group">
+              <select name="tratamento" id="tratamento" required value="<%= locals.usuarioLogado && usuarioLogado.tratamento %>">
+                <option disabled selected>Selecionar</option>
+                <optgroup label="Informais">
+                  <option value="nome">Primeiro Nome</option>
+                  <option value="apelido">Apelido</option>
+                  <option value="sobrenome">Sobrenome</option>
+                  <option value="nomeCompleto">Nome Completo</option>
+                </optgroup>
+                <optgroup label="Formais">
+                  <option value="vosMerce">Vós Mercê</option>
+                  <option value="vossaSenhoria">Vossa Senhoria</option>
+                </optgroup>
+                <optgroup label="Outros">
+                  <option value="docinhoDeCoco">Docinho de Côco</option>
+                  <option value="meuBem">Meu Bem</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+          <div class="input-group">
+            <input list="msgVozOptions" id="ouveMsgVoz" name="ouveMsgVoz">
+            <label for="ouveMsgVoz">Ouve mensagem de voz?</label>
+            <datalist id="msgVozOptions">
+              <option value="Sim">Sempre ouço</option>
+              <option value="Às vezes">Só de vez em quando...</option>
+              <option value="Não">Jamais, nunca ouço!</option>
+            </datalist>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Biografia</legend>
+          <div class="input-group">
+            <textarea id="bio" name="bio" cols="100%" rows="10" placeholder="Digite sua breve biografia aqui - máximo de 480 caracteres." maxlength="480" required><%= locals.usuarioLogado && usuarioLogado.bio %></textarea>
+            <label for="bio">Escreva uma breve descrição sobre você.</label>
+            <small>Máximo de 480 caracteres.</small>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Termos e Aceites</legend>
+          <div class="input-group">
+            <div>
+              <input type="checkbox" id="optin" name="optin" checked>
+              <label for="optin">Desejo receber newsletter.</label>
+            </div>
+            <div>
+              <input type="checkbox" id="aceite" name="aceite" required>
+              <label for="aceite">Estou de acordo com os termos.</label>
+            </div>
+          </div>
+        </fieldset>
+        <div class="btn-group btn-group--end">
+          <button class="btn btn--neutral-light" type="reset">Limpar</button>
+          <button class="btn btn--tertiary-dark" type="submit">Enviar</button>
+        </div>
+      </form>
+      <p class="secondary-light">Ops! Na verdade já tenho cadastro. Só preciso <a href="/acesso/login" class="light">fazer login</a>!</p>
+    </article>
+  </section>
+
+</main>
+<%- include('./partials/footer') %>

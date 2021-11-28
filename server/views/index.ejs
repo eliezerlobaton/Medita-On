@@ -1,0 +1,28 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main class="bg-light">
+
+  <section class="banner-img-sm bg-tertiary-dark" style="--card-img: url('<%= bannerTopo %>')">
+    <h1 class="light flex-item-full-row"><%= titulo %></h1>
+    <p class="primary text-center text-bolder flex-item-full-row"><%= subtitulo %></p>
+  </section>
+
+  <section id="produtos" class="bg-tertiary-light">
+    <h2 class="tertiary flex-item-full-row">Veja nossos Produtos</h2>
+    <p class="tertiary-dark text-center text-bolder flex-item-full-row">Produtos muito, mas muuuuuito bacanas mesmo! Dá uma conferida!</p>
+    <%- include('./partials/productCard') %>
+  </section>
+
+  <section id="middleBanner" class="banner-img-sm banner-img-sm--middle bg-primary-dark" style="--card-img: url('<%= bannerMeio %>')">
+    <h2 class="light flex-item-full-row">Ofertas limitadas! Não vacila!</h2>
+    <p class="primary text-center text-bolder flex-item-full-row">Se não levar hoje, pode ser que não tenha mais amanhã... melhor aproveitar a oportunidade né!</p>
+  </section>
+
+  <section id="usuarios" class="bg-secondary-light">
+    <h2 class="secondary flex-item-full-row">Conheça Nossos Usuários</h2>
+    <p class="secondary-dark text-center text-bolder flex-item-full-row">Usuários muito, mas muuuuuito gente boa! Dá uma olhada nessa galera!</p>
+    <%- include('./partials/userCard') %>
+  </section>
+
+</main>
+<%- include('./partials/footer') %>
