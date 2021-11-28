@@ -480,6 +480,14 @@ footer .nav {
     display: none;
   }
 
+  .search .search__form input {
+    width: 70%;
+  }
+
+  .search .search__form button.btn {
+    width: 30%;
+  }
+
   div {
     color: blue;
   }
