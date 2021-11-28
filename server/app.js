@@ -33,8 +33,8 @@ app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // ARQUIVOS DE ROTAS SENDO CHAMADOS PARA CADA INÍCIO DE ROTA
-app.use('/acesso', acessoRouter) // Acessos como Login, Logout e Cadastro
-app.use('/usuarios', usersRouter)
+app.use('/acess', acessoRouter) // Acessos como Login, Logout e Cadastro
+app.use('/user', usersRouter)
 app.use('/', indexRouter)
 
 // A PARTIR DAQUI SOMENTE USUÁRIOS ADMNISTRADORES PODEM ACESSAR

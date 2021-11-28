@@ -4,9 +4,9 @@ const express = require('express'),
   authMiddleware = require('../middlewares/auth')
 
 // ROTAS DE CADATRO
-router.get('/cadastro', acessoController.register) // Form de cadastro
-router.post('/cadastro', acessoController.add) // Execução de cadastro
-router.post('/cadastro/:id', acessoController.edit) // Form de edição de cadastro
+router.get('/register', acessoController.register) // Form de cadastro
+router.post('/register', acessoController.add) // Execução de cadastro
+router.post('/register/:id', acessoController.edit) // Form de edição de cadastro
 
 // ROTAS DE LOGIN
 router.get('/login', acessoController.login) // Form de login
