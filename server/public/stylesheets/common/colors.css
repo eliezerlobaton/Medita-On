@@ -1,0 +1,78 @@
+/*
+ * CORES
+ */
+/* FONT COLORS */
+.primary-light,
+a.primary-light {
+  color: var(--primary-light);
+}
+
+.primary,
+a.primary {
+  color: var(--primary);
+}
+
+.primary-dark,
+a.primary-dark {
+  color: var(--primary-dark);
+}
+
+.secondary-light,
+a.secondary-light {
+  color: var(--secondary-light);
+}
+
+.secondary,
+a.secondary {
+  color: var(--secondary);
+}
+
+.secondary-dark,
+a.secondary-dark {
+  color: var(--secondary-dark);
+}
+
+.tertiary-light,
+a.tertiary-light {
+  color: var(--tertiary-light);
+}
+
+.tertiary,
+a.tertiary {
+  color: var(--tertiary);
+}
+
+.tertiary-dark,
+a.tertiary-dark {
+  color: var(--tertiary-dark);
+}
+
+.light,
+a.light {
+  color: var(--light);
+}
+
+.neutral-light,
+a.neutral-light {
+  color: var(--neutral-light);
+}
+
+.neutral-light,
+a.neutral-light {
+  color: var(--neutral-light);
+}
+
+.neutral,
+a.neutral {
+  color: var(--neutral);
+}
+
+.neutral-dark,
+a.neutral-dark {
+  color: var(--neutral-dark);
+}
+
+.dark,
+a.dark {
+  color: var(--dark);
+}

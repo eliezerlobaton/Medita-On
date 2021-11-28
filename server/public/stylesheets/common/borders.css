@@ -1,0 +1,114 @@
+.border-light {
+  border: var(--border-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-neutral-light {
+  border: var(--border-neutral-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-neutral {
+  border: var(--border-neutral);
+  border-width: var(--border-width-lg);
+}
+
+.border-neutral-dark {
+  border: var(--border-neutral-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-dark {
+  border: var(--border-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-primary-light {
+  border: var(--border-primary-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-primary {
+  border: var(--border-primary);
+  border-width: var(--border-width-lg);
+}
+
+.border-primary-dark {
+  border: var(--border-primary-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-secondary-light {
+  border: var(--border-secondary-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-secondary {
+  border: var(--border-secondary);
+  border-width: var(--border-width-lg);
+}
+
+.border-secondary-dark {
+  border: var(--border-secondary-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-tertiary-light {
+  border: var(--border-tertiary-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-tertiary {
+  border: var(--border-tertiary);
+  border-width: var(--border-width-lg);
+}
+
+.border-tertiary-dark {
+  border: var(--border-tertiary-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-success-light {
+  border: var(--border-success-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-success {
+  border: var(--border-success);
+  border-width: var(--border-width-lg);
+}
+
+.border-success-dark {
+  border: var(--border-success-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-warning-light {
+  border: var(--border-warning-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-warning {
+  border: var(--border-warning);
+  border-width: var(--border-width-lg);
+}
+
+.border-warning-dark {
+  border: var(--border-warning-dark);
+  border-width: var(--border-width-lg);
+}
+
+.border-alert-light {
+  border: var(--border-alert-light);
+  border-width: var(--border-width-lg);
+}
+
+.border-alert {
+  border: var(--border-alert);
+  border-width: var(--border-width-lg);
+}
+
+.border-alert-dark {
+  border: var(--border-alert-dark);
+  border-width: var(--border-width-lg);
+}

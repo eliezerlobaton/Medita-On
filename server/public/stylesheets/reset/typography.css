@@ -1,0 +1,110 @@
+h1 {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  line-height: calc(2.5rem * 1.66);
+  text-align: center;
+}
+
+h2 {
+  font-family: var(--font-title);
+  font-size: 2.25rem;
+  line-height: calc(2.25rem * 1.66);
+  text-align: center;
+}
+
+h3 {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  line-height: calc(2rem * 1.66);
+  text-align: center;
+}
+
+h4 {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  line-height: calc(1.75rem * 1.66);
+  text-align: left;
+}
+
+h5 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  line-height: calc(1.5rem * 1.66);
+  text-align: left;
+}
+
+h6 {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  line-height: calc(1.25rem * 1.66);
+  text-align: left;
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: calc(1.125rem * 1.66);
+  text-align: left;
+}
+
+strong,
+em,
+abbr {
+  font-weight: inherit;
+  line-height: calc(1rem * 1.66);
+  text-decoration: none;
+  font-style: normal;
+}
+
+abbr {
+  text-decoration: underline;
+}
+
+mark {
+  background-color: var(--tertiary-light);
+  color: var(--tertiary-dark);
+}
+
+del {
+  color: var(--alert);
+  font-style: italic;
+}
+
+quote,
+cite {
+  font-weight: bolder;
+  font-size: 1.25rem;
+  line-height: calc(1.25rem * 1.66);
+}
+
+sub,
+sup {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-right: var(--spacing-half);
+}
+
+small {
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: calc(1rem * 1.66);
+  padding: var(--spacing-quarter) var(--spacing-half);
+}
+
+big {
+  font-size: 1.25rem;
+  line-height: calc(1.25rem * 1.66);
+}
+
+@media only screen and (min-width: 576px) {}
+
+@media only screen and (min-width: 640px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1041px) {}
+
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1920px) {}

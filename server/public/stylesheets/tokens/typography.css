@@ -1,0 +1,14 @@
+:root {
+  --font-size: 16px;
+  --font-size-sm: 14px;
+  --font-size-md: var(--font-size);
+  --font-size-lg: (var(--font-size) * 1.5);
+  --font-size-xl: (var(--font-size) * 1.75);
+  --font-size-xxl: (var(--font-size) * 2);
+
+  --font-default: 'Urbanist', sans-serif;
+  --font-title: 'Montserrat', sans-serif;
+  --font-btn: 'Nunito Sans', sans-serif;
+
+  --text-rendering: optimizeSpeed;
+}

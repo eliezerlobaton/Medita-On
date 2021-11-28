@@ -1,0 +1,44 @@
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-jusitfy {
+  text-align: justify;
+}
+
+.text-sm {
+  font-size: var(--font-size-sm);
+  font-weight: bold;
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+
+.text-xxl {
+  font-size: var(--font-size-xxl);
+}
+
+.text-bolder {
+  font-weight: bolder;
+}
+
+.text-bold {
+  font-weight: bold;
+}

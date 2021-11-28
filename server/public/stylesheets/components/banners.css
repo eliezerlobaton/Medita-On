@@ -1,0 +1,68 @@
+.banner-img-sm {
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-image: var(--card-img);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 384% auto;
+}
+
+.banner-img-sm.banner-img-sm--middle {
+  background-position: center center;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 420px) {
+  .banner-img-sm {
+    background-position: center top;
+    background-size: 220% auto;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .banner-img-sm {
+    background-position: center top;
+    background-size: 154% auto;
+  }
+}
+
+@media only screen and (min-width: 640px) {
+  .banner-img-sm {
+    background-position: center 45px;
+    background-size: 145% auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .banner-img-sm {
+    background-position: center top;
+    background-size: 140% auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .banner-img-sm {
+    background-position: center top;
+    background-size: 110% auto;
+  }
+}
+
+@media only screen and (min-width: 1041px) {
+  .banner-img-sm {
+    background-position: center top;
+    background-size: 101% auto;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .banner-img-sm {
+    background-position: center -60px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .banner-img-sm {
+    background-position: center -136px;
+    background-size: 100% auto;
+  }
+}

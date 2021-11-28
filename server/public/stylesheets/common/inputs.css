@@ -1,0 +1,23 @@
+.input-group {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  padding: var(--spacing-half) 0;
+}
+
+.input-group.input-group--radio {
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.input-group.input-group--radio > div {
+  margin-bottom: var(--spacing);
+}
+
+@media only screen and (min-width: 640px) {
+  .input-group {
+    padding: var(--spacing-half);
+  }
+}

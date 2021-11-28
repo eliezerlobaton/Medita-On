@@ -1,0 +1,6 @@
+body>header {
+  background-color: var(--dark);
+  border-bottom: var(--border-secondary);
+  border-width: var(--border-width-lg);
+  color: var(--light);
+}
