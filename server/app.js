@@ -8,7 +8,6 @@ const createError = require('http-errors'),
 // ARQUIVOS DE ROTAS - IMPORTAÇÃO
 const indexRouter = require('./routes/index'),
   usersRouter = require('./routes/users'),
-  acessoRouter = require('./routes/acesso'),
   adminRouter = require('./routes/admin')
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
@@ -32,29 +31,21 @@ app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 // PASTA PÚBLICA PARA ARQUIVOS ESTÁTICOS (IMG, JS, CSS...)
 app.use(express.static(path.join(__dirname, 'public')))
 
-// ARQUIVOS DE ROTAS SENDO CHAMADOS PARA CADA INÍCIO DE ROTA
-app.use('/acess', acessoRouter) // Acessos como Login, Logout e Cadastro
 app.use('/user', usersRouter)
 app.use('/', indexRouter)
 
-// A PARTIR DAQUI SOMENTE USUÁRIOS ADMNISTRADORES PODEM ACESSAR
-app.use(adminMiddleware)
+// app.use(adminMiddleware)
 
-// ROTAS ADMINISTRATIVAS
 app.use('/admin', adminRouter)
 
-// CAPTURA DO 404 E SEQUÊNCIA AO TRATAMENTO DO ERRO
 app.use(function (req, res, next) {
   next(createError(404))
 })
 
-// MANIPULAÇÃO DE ERRO
 app.use(function (err, req, res, next) {
-  // DEFINE LOCALS, EXIBINDO ERROS APENAS EM AMBIENTE DE DESENVOLVIMENTO
   res.locals.message = err.message
   res.locals.error = req.app.get('env') === 'development' ? err : {}
 
-  // RENDERIZANDO A VIEW DE ERROS
   res.status(err.status || 500)
   res.render('error')
 })
