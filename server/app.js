@@ -26,7 +26,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // COOKIES E SESSION (PARSE E DEFINIÇÃO DA SESSION COM SEGREDO E TEMPO PARA EXPIRAÇÃO)
 app.use(cookieParser())
-app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
+// app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 
 // PASTA PÚBLICA PARA ARQUIVOS ESTÁTICOS (IMG, JS, CSS...)
 app.use(express.static(path.join(__dirname, 'public')))

@@ -1,33 +1,38 @@
 module.exports = (sequelize, DataType) => {
-    const Phrases = sequelize.define('Phrases', {
+    const Users = sequelize.define('Users', {
       id: {
         type: DataType.INTEGER.UNSIGNED,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
       },
-      phrase: {
-        type: DataType.STRING(255),
+      frist_name: {
+        type: DataType.STRING(50),
         allowNull: false,
       },
-      author: {
+      last_name: {
         type: DataType.STRING(50),
         allowNull: false
       },
-      creation_date: {
+      birth: {
         type: DataType.DATE,
         allowNull: false
+      },
+      email: {
+        type: DataType.STRING(100),
+        allowNull: false,
+        unique: true,
+      },
+      password: {
+        type: DataType.STRING(50),
+        allowNull: false
       }
-      // updateAt: {
-      //   type: DataType.DATE,
-      //   allowNull: true
-      // }
     },
     {
-      tableName: 'phrases',
+      tableName: 'users',
       timestamps: false
     });
-    return Phrases;
+    return Users;
   };
   
   

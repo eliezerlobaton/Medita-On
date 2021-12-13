@@ -43,7 +43,7 @@ const controller = {
     // res.render('index');
   },
 
-  create: async (req, res, next) => {
+  create: async (req, res) => {
     const {
       phrase,
       author
