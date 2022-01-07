@@ -1,60 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Medita-on</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-  </head>
-
-  <body>
-    <header>
-      <nav class="header navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html" title="Acessar pagina inicial" >
-            <img class="logo" src="img/logo-meditaon.png" alt="Logo Meditaon" width="150" height="auto" />
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav text-center">
-              <a class="nav-link header" aria-current="page" href="#">Meditação</a>
-              <a class="nav-link header" href="#">Mantras</a>
-              <a class="nav-link header" href="#">Yoga</a>
-              <a class="nav-link header" href="#">Om</a>
-              <a class="nav-link header" href="#">Refletir</a>
-              <a class="btn-header mobile" href="#">Conectar</a>
-            </div>
-          </div>
-          <div class="btn-connect justify-content-end">
-            <div class="navbar-nav">
-              <a class="btn-header" href="#">Conectar</a>
-            </div>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main>
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main>
     <aside class="search">
       <form class="search__form" action="" method="GET">
-        <label for="search">Espiritualidade e saúde </label>
         <input type="search" name="search" id="search" placeholder="🔍" />
         <button class="btn">Buscar</button>
       </form>
     </aside>
     
      <div class="container">
-      <section class="categories">
+      <section class="categories row">
+       <div class="col-lg-3 col-md-6 col-12">
         <article class="category">
           <a href="#" title="Confira nossas Palestras" class="category__link">
             <div class="category__img-container">
@@ -72,6 +28,8 @@
             </div>
           </a>
         </article>
+       </div>
+       <div class="col-lg-3 col-md-6 col-12">
         <article class="category">
           <a
             href="#"
@@ -93,6 +51,8 @@
             </div>
           </a>
         </article>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
         <article class="category">
           <a
             href="#"
@@ -114,6 +74,8 @@
             </div>
           </a>
         </article>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
         <article class="category">
           <a href="#" title="Saiba mais sobre Yoga" class="category__link">
             <div class="category__img-container">
@@ -131,11 +93,13 @@
             </div>
           </a>
         </article>
+      </div>
       </section>
      </div>
 
      <div class="container">
-      <section class="entries">
+      <section class="entries row">
+        <div class="col-lg-4 col-md-4 col-12">
         <article class="entry" title="Aliviar stresse">
           <div class="entry__img-container">
             <img
@@ -150,6 +114,8 @@
             >Aliviar stresse</a
           >
         </article>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
         <article class="entry" title="Amor próprio">
           <div class="entry__img-container">
             <img
@@ -164,6 +130,8 @@
             >Amor próprio</a
           >
         </article>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
         <article class="entry" title="Dormir bem ">
           <div class="entry__img-container">
             <img
@@ -176,6 +144,7 @@
           </div>
           <a href="#" title="Dormir bem " class="entry__link btn">Dormir bem</a>
         </article>
+      </div>
       </section>
     </div>
 
@@ -216,36 +185,4 @@
       </div>
 
     </main>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6 col-md-4 col-12">
-            <p>© Copyright 2021 - MeditaOn.</p>
-          </div>
-          <div class="col-lg-6 col-md-8 col-12">
-            <ul class="nav justify-content-end">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Meditação</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Mantras</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Yoga</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Om</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Refletir</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </div>
-    </footer>
-  </body>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
-</html>
+<%- include('./partials/footer') %>
