@@ -1,9 +1,9 @@
 const express = require('express'),
   router = express.Router(),
-  userController = require('../controllers/users')
+  userController = require('../controllers/UserController')
 
 // ROTAS DE USUÁRIOS (GERAL E POR ID)
 router.get('/:id', userController.show)
 router.get('/', userController.index)
-
+router.post('/register', userController.create)
 module.exports = router

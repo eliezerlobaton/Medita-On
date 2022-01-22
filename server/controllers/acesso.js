@@ -1,12 +1,28 @@
-const fs = require('fs'),
-  path = require('path')
+const Sequelize = require("sequelize"),
+  config = require("../database/config"),
+  db = new Sequelize(config);
+
 
 const controller = {
-  register: (req, res, next) => {
+  register: async (req, res, next) => {
     res.render('register');
   },
   add: (req, res, next) => {
-    const usuarios = fs.readFileSync(path.join(__dirname, '..', 'data', 'usuariosPlaceholder.json'), 'utf-8')
+    
+    const usuarios = await db.query(
+      "INSERT INTO users(frist_name, last_name, birth, email, password) VALUES (:frist_name, :last_name, :birth, :email, :password)",
+      {
+        replacements: {
+          frist_name,
+          last_name,
+          birth,
+          email,
+          password
+        },
+        type: Sequelize.QueryTypes.INSERT,
+      }
+    )
+
     let usuariosNew = JSON.parse(usuarios)
     let newUsuario = req.body
     let newId = usuariosNew[usuariosNew.length - 1].id + 1
