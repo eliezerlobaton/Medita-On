@@ -19,8 +19,11 @@ const controller = {
     fs.writeFileSync(path.join(__dirname, '..', 'data', 'usuariosPlaceholder.json'), JSON.stringify(usuariosNew))
     res.redirect('../../usuarios')
   },
-  login: (req, res, next) => {
+  loginView: (req, res, next) => {
     res.render('login');
+  },
+  loginAuth: {
+    
   },
   auth: (req, res, next) => {
     res.redirect('../')

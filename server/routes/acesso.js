@@ -9,7 +9,7 @@ router.post('/register', acessoController.add) // Execução de cadastro
 router.post('/register/:id', acessoController.edit) // Form de edição de cadastro
 
 // ROTAS DE LOGIN
-router.get('/login', acessoController.login) // Form de login
+router.get('/login', acessoController.loginView) // Form de login
 router.post('/login', authMiddleware, acessoController.auth) // Execução de login
 router.get('/logout', acessoController.logout) // Execução de logout
 
