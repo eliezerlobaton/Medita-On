@@ -45,7 +45,7 @@ const controller = {
 
   create: async (req, res) => {
     const { frist_name, last_name, birth, email, password } = req.body;
-
+    console.log(123)
     try{
       let NewUser = await Users.create({
         frist_name,

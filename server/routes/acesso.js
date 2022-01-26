@@ -5,7 +5,7 @@ const express = require('express'),
 
 // ROTAS DE CADATRO
 router.get('/register', acessoController.register) // Form de cadastro
-router.post('/register', acessoController.add) // Execução de cadastro
+ router.post('/register', acessoController.add) // Execução de cadastro
 router.post('/register/:id', acessoController.edit) // Form de edição de cadastro
 
 // ROTAS DE LOGIN
