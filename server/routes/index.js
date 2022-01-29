@@ -4,5 +4,5 @@ const express = require('express'),
 
 // ROTA PREINCIPAL (Home)
 router.get('/', indexController.index)
-
+ router.post('/register', indexController.register)
 module.exports = router
