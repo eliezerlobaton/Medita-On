@@ -306,7 +306,6 @@ input::placeholder {
   top: -2px;
   border: 0;
   background-color: #f0f4fc;
-  box-shadow: var(--sombra-principal);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -332,12 +331,16 @@ input::placeholder {
   font-size: 0.95em;
 }
 
+.tituloh4 {
+  color: var(--cor-primary);
+  font-size: 2em;
+}
+
 .seccion-perfil-usuario .perfil-usuario-footer,
 .seccion-perfil-usuario .perfil-usuario-bio {
   display: flex;
   flex-wrap: wrap;
   padding: 1.5rem 2rem;
-  box-shadow: var(--sombra-principal);
   background-color: var(--cor-primary);
   border-radius: 15px;
   width: 100%;
@@ -365,12 +368,6 @@ input::placeholder {
 
 .seccion-perfil-usuario {
   margin-top: 0.5rem;
-}
-
-h4 {
-  position: relative;
-  padding: 0 0 10px;
-  margin-bottom: 10px;
 }
 
 .campo {

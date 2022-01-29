@@ -7,6 +7,7 @@ const express = require("express"),
 router.post("/register", userController.create);
 router.get("/edit-perfil", userController.editPerfil);
 router.put("/edit-profile/:id", userController.editProfile);
+router.post("/editar", userController.editar);
 router.get("/:id", userController.show);
 router.get("/", userController.index);
 module.exports = router;

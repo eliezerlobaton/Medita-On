@@ -20,13 +20,47 @@
   <div class="container">
     <div class="contatoperfil">
       <div class="meucontato"></div>
-      <h4>Meus dados</h4>
-      <input type="text" class="campo" placeholder="Nome" />
-      <input type="text" class="campo" placeholder="Sobrenome" />
-      <input type="text" class="campo" placeholder="Aniversário" />
-      <input type="text" class="campo" placeholder=" Email" />
-      <input type="text" class="campo" placeholder="Senha" />
-      <button class="btn">Enviar</button>
+
+      <h4 class="tituloh4">Eu sou <%= usuario.frist_name %></h4>
+
+      <form action="editar" method="post">
+        <input
+          value="<%= usuario.frist_name %>"
+          type="text"
+          class="campo"
+          placeholder="Nome"
+          name="frist_name"
+        />
+        <input
+          value="<%= usuario.last_name %>"
+          type="text"
+          class="campo"
+          placeholder="Sobrenome"
+          name="last_name"
+        />
+        <input
+          value="<%= usuario.birth %>"
+          type="text"
+          class="campo"
+          placeholder="Aniversário"
+          name="birth"
+        />
+        <input
+          value="<%= usuario.email %>"
+          type="text"
+          class="campo"
+          placeholder="Email"
+          name="email"
+        />
+        <input
+          value="<%= usuario.password %>"
+          type="text"
+          class="campo"
+          placeholder="Senha"
+          name="password"
+        />
+        <button class="btn" type="submit">Enviar</button>
+      </form>
     </div>
   </div>
 </section>
