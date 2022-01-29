@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   --cor-primary: #3f51b5;
@@ -8,7 +8,7 @@
   --cor-bebe: #e1e8f8;
   --cor-diluida: #f0f4fc;
   --cor-base: #f7f9fe;
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
   --fontse-tamanho-padrao: 16px;
   --padding-padrao: 16px;
   --padding-metade: calc(var(--padding-padrao) / 2);
@@ -31,9 +31,9 @@ html {
 
 /* Geral (tags HTML) */
 body {
-box-sizing: border-box;
-font-family: var(--font-family) !important;
-transition: all 0.5s;
+  box-sizing: border-box;
+  font-family: var(--font-family) !important;
+  transition: all 0.5s;
 }
 
 header {
@@ -120,7 +120,6 @@ input::placeholder {
   color: var(--cor-secondary);
 }
 
-
 /* Gerais (classes) */
 .btn {
   background-color: var(--cor-primary);
@@ -169,14 +168,18 @@ input::placeholder {
 }
 
 
-.banner__one, .banner__two, .banner__three{
+.banner__one,
+.banner__two,
+.banner__three {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
 }
 
-.bannerOne__content, .bannerTwo__content, .bannerThree__content {
+.bannerOne__content,
+.bannerTwo__content,
+.bannerThree__content {
   position: absolute;
   order: 1;
   padding-left: 6rem;
@@ -188,7 +191,8 @@ input::placeholder {
   margin: 0;
 }
 
-.bannerTwo__content h3, .bannerThree__content h3 {
+.bannerTwo__content h3,
+.bannerThree__content h3 {
   font-size: 2rem;
   margin: 0;
 }
@@ -198,12 +202,15 @@ input::placeholder {
   margin: 0;
 }
 
-.bannerTwo__content p, .bannerThree__content p {
+.bannerTwo__content p,
+.bannerThree__content p {
   font-size: 1rem;
   margin: 0;
 }
 
-.bannerOne__content a, .bannerTwo__content a, .bannerThree__content a {
+.bannerOne__content a,
+.bannerTwo__content a,
+.bannerThree__content a {
   color: var(--cor-destaque);
   background-color: #ffffff;
   border-radius: 20px;
@@ -213,7 +220,9 @@ input::placeholder {
   transition: all 0.5s;
 }
 
-.bannerOne__content a:hover, .bannerTwo__content a:hover,.bannerThree__content a:hover {
+.bannerOne__content a:hover,
+.bannerTwo__content a:hover,
+.bannerThree__content a:hover {
   color: #ffffff;
   background: var(--cor-destaque);
 }
@@ -406,12 +415,12 @@ footer .nav {
 }
 
 .navbar-toggler:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 @media only screen and (max-width: 991px) {
-
-  footer p, footer .nav {
+  footer p,
+  footer .nav {
     text-align: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -426,12 +435,16 @@ footer .nav {
     margin: 0;
   }
 
-  .bannerOne__content, .bannerTwo__content, .bannerThree__content {
+  .bannerOne__content,
+  .bannerTwo__content,
+  .bannerThree__content {
     padding-left: 3rem;
   }
 
-  .bannerOne__content a, .bannerTwo__content a, .bannerThree__content a {
-    margin-top: 10px ;
+  .bannerOne__content a,
+  .bannerTwo__content a,
+  .bannerThree__content a {
+    margin-top: 10px;
   }
 
   .btn-connect {
@@ -459,7 +472,6 @@ footer .nav {
     font-size: 26px;
   }
 
-
   .categories {
     display: flex;
     flex-flow: row nowrap;
@@ -470,9 +482,7 @@ footer .nav {
   }
 }
 
-
 @media (max-width: 768px) {
-
   .btn-connect {
     display: none;
   }
@@ -480,5 +490,4 @@ footer .nav {
   div {
     color: blue;
   }
-
 }

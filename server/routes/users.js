@@ -1,9 +1,13 @@
-const express = require('express'),
+const express = require("express"),
   router = express.Router(),
-  userController = require('../controllers/UserController')
+  userController = require("../controllers/UserController");
 
 // ROTAS DE USUÁRIOS (GERAL E POR ID)
-router.get('/:id', userController.show)
-router.get('/', userController.index)
-router.post('/register', userController.create)
-module.exports = router
+
+router.post("/register", userController.create);
+router.get("/edit-perfil", userController.editPerfil);
+router.put("/edit-profile/:id", userController.editProfile);
+router.post("/editar", userController.editar);
+router.get("/:id", userController.show);
+router.get("/", userController.index);
+module.exports = router;

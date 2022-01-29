@@ -1,0 +1,67 @@
+<%- include('./partials/head') %> <%- include('./partials/header') %>
+<section class="seccion-perfil-usuario">
+  <div class="perfil-usuario-header">
+    <div class="perfil-usuario-portada">
+      <div class="perfil-usuario-avatar">
+        <img src="/img/pic-1.png" alt="img-avatar" />
+      </div>
+      <button type="button" class="boton-portada">Cambiar fondo</button>
+    </div>
+  </div>
+  <div class="perfil-usuario-body">
+    <div class="perfil-usuario-bio">
+      <h3 class="titulo">Alicia Da Silva</h3>
+      <p class="texto">
+        Quando você quer alguma coisa, todo o universo conspira para que você
+        realize o seu desejo.
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="contatoperfil">
+      <div class="meucontato"></div>
+
+      <h4 class="tituloh4">Eu sou <%= usuario.frist_name %></h4>
+
+      <form action="editar" method="post">
+        <input
+          value="<%= usuario.frist_name %>"
+          type="text"
+          class="campo"
+          placeholder="Nome"
+          name="frist_name"
+        />
+        <input
+          value="<%= usuario.last_name %>"
+          type="text"
+          class="campo"
+          placeholder="Sobrenome"
+          name="last_name"
+        />
+        <input
+          value="<%= usuario.birth %>"
+          type="text"
+          class="campo"
+          placeholder="Aniversário"
+          name="birth"
+        />
+        <input
+          value="<%= usuario.email %>"
+          type="text"
+          class="campo"
+          placeholder="Email"
+          name="email"
+        />
+        <input
+          value="<%= usuario.password %>"
+          type="text"
+          class="campo"
+          placeholder="Senha"
+          name="password"
+        />
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+<%- include('./partials/footer') %>
