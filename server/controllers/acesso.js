@@ -2,9 +2,13 @@ const fs = require('fs'),
   path = require('path')
 
 const controller = {
+  
   register: (req, res, next) => {
+
     res.render('register');
+
   },
+
   add: (req, res, next) => {
     const usuarios = fs.readFileSync(path.join(__dirname, '..', 'data', 'usuariosPlaceholder.json'), 'utf-8')
     let usuariosNew = JSON.parse(usuarios)

@@ -1,8 +1,66 @@
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
+
 <main>
 
-  Registro
+  <section id="formulario">
+
+    <h1>Faça o seu cadastro</h1>
+
+     <form action="/cadastro/add" method="POST">
+
+         <div>
+
+            <label for="email">E-mail</label>
+            <input type="email" required  name="email" id = "email" placeholder="Digite seu e-mail" data-email-validate>
+
+        </div>
+
+        <div>
+
+            <label for="nome">Nome</label>
+            <input type="text" required  name="frist_name" id = "nome" placeholder="Digite seu nome" data-max-length="16">
+
+        </div>
+
+        <div>
+
+            <label for="sobreNome">Sobrenome</label>
+            <input type="text" required  name="last_name" id = "sobrenome" placeholder="Digite seu sobrenome">
+
+        </div>
+
+        <div>
+
+            <label for="dataNascimento">Data de nascimento</label>
+            <input type="date" required  name="birth" id = "dataNascimento" min = "1930-01-01">
+
+        </div>
+
+        <div>
+
+            <label for="senha">Senha</label>
+            <input type="password" required  name="password" id = "senha" placeholder="Digite sua senha">
+
+        </div>
+
+        <div>
+
+            <label for="confirmaSenha">Confirmação de senha</label>
+            <input type="password" required  name="confirm_password" id = "confirmaSenha" placeholder="Confirme a senha" data-equal="password">
+
+        </div>
+
+        <div>
+
+            <input class="btn-header" type="submit" value="Registrar">
+
+        </div>
+
+    </form>
+
+</section>
 
 </main>
+
 <%- include('./partials/footer') %>

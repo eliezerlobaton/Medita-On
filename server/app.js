@@ -8,7 +8,9 @@ const createError = require('http-errors'),
 // ARQUIVOS DE ROTAS - IMPORTAÇÃO
 const indexRouter = require('./routes/index'),
   usersRouter = require('./routes/users'),
-  adminRouter = require('./routes/admin')
+  adminRouter = require('./routes/admin'),
+  registrerRouter = require('./routes/register'),
+  loginRouter = require('./routes/login')
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
 const adminMiddleware = require('./middlewares/admin')
@@ -33,6 +35,8 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/user', usersRouter)
 app.use('/', indexRouter)
+app.use('/cadastro', registrerRouter)
+app.use('/login', loginRouter)
 
 // app.use(adminMiddleware)
 
