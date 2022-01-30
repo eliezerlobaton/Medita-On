@@ -1,7 +1,5 @@
-const Sequelize = require("sequelize"),
-  config = require("../database/config"),
-  db = new Sequelize(config),
-  jwt = require("../helpers/jwt");
+const { Users } = require("../models")
+const jwt = require("../helpers/jwt")
 
 
 const controller = {
@@ -45,23 +43,17 @@ const controller = {
   loginView: (req, res, next) => {
     res.render('login');
   },
-  loginAuth: (req, res, next) => {
-   const { email, password } = req.body,
-    usuarios = db.query("SELECT email, password FROM users WHERE email = :email AND password = :password", {
-     replacements: {
-       email,
-       password
-     },
-     type: Sequelize.QueryTypes.SELECT
-    }),
-    usuario = usuarios.find(usuario => usuario.email === email && usuario.password === password)
-    if(usuario && password === usuario.password) {
-      const token = jwt.generateToken(usuario.id)
-      return res.status(200).json({ token })
-    }
+  loginAuth: async (req, res, next) => {
+   const { email, password } = req.body;
+    
+   let user = await Users.findOne({ where: { email }, attributes: { exclude: [ password ]} })
+    if(user && password === user.password) {
+      const token = jwt.generateToken(user.id)
+      return res.status(200).json({ token, user })
+    } else {
     return res.status(400).json({ error: 'Usuário ou senha inválidos' })
-    
-    
+    }
+
   },
   
   auth: (req, res, next) => {
