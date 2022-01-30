@@ -2,13 +2,14 @@ const createError = require("http-errors"),
   express = require("express"),
   path = require("path"),
   cookieParser = require("cookie-parser"),
-  logger = require("morgan"),
-  session = require("express-session");
+  logger = require("morgan");
+
 
 // ARQUIVOS DE ROTAS - IMPORTAÇÃO
 const indexRouter = require("./routes/index"),
   usersRouter = require("./routes/users"),
-  adminRouter = require("./routes/admin");
+  adminRouter = require("./routes/admin"),
+  acessoRouter = require("./routes/acesso");
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
 const adminMiddleware = require("./middlewares/admin");
@@ -28,12 +29,13 @@ app.use(express.urlencoded({ extended: false }));
 
 // COOKIES E SESSION (PARSE E DEFINIcaO DA SESSION COM SEGREDO E TEMPO PARA EXPIRAcaO)
 app.use(cookieParser());
-app.use(session({ secret: "QWhNdWxla2U=", cookie: { maxAge: 60000 } }));
+
 
 app.use("/user", usersRouter);
 app.use("/", indexRouter);
+app.use("/acesso", acessoRouter);
 
-// app.use(adminMiddleware)
+app.use(adminMiddleware)
 
 app.use("/admin", adminRouter);
 

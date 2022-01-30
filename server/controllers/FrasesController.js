@@ -40,7 +40,7 @@ const controller = {
         error,
       });
     }
-    // res.render('index');
+    res.render('frases');
   },
 
   create: async (req, res, next) => {
