@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var express = require('express');
 var router = express.Router();
 
@@ -7,3 +8,13 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+=======
+const express = require('express'),
+  router = express.Router(),
+  indexController = require('../controllers/index')
+
+// ROTA PREINCIPAL (Home)
+router.get('/', indexController.index)
+
+module.exports = router
+>>>>>>> dev

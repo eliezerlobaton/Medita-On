@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,3 +10,193 @@
     <p>Welcome to <%= title %></p>
   </body>
 </html>
+=======
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+<main>
+    <aside class="search">
+      <form class="search__form" action="" method="GET">
+        <input type="search" name="search" id="search" placeholder="🔍" />
+        <button class="btn">Buscar</button>
+      </form>
+    </aside>
+    
+     <div class="container">
+      <section class="categories row">
+       <div class="col-lg-3 col-md-6 col-12">
+        <article class="category">
+          <a href="#" title="Confira nossas Palestras" class="category__link">
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-ojo.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">palestras</h4>
+              <p class="category__description">Conheça o inconciente.</p>
+            </div>
+          </a>
+        </article>
+       </div>
+       <div class="col-lg-3 col-md-6 col-12">
+        <article class="category">
+          <a
+            href="#"
+            title="Ouça Nossos áudios e encontre-se"
+            class="category__link"
+          >
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-oreja.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">audios</h4>
+              <p class="category__description">A sua mente é poderosa.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <article class="category">
+          <a
+            href="#"
+            title="Assista os videos de MeditaOn"
+            class="category__link"
+          >
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-play.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">Videos</h4>
+              <p class="category__description">Momento de Reflexão.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <article class="category">
+          <a href="#" title="Saiba mais sobre Yoga" class="category__link">
+            <div class="category__img-container">
+              <img
+                class="category__img"
+                src="img/icono-yoga.png"
+                alt="Palestras"
+                width="120"
+                height="120"
+              />
+            </div>
+            <div class="category__content">
+              <h4 class="category__title">Corpo São</h4>
+              <p class="category__description">Vinyasa Yoga.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+      </section>
+     </div>
+
+     <div class="container">
+      <section class="entries row">
+        <div class="col-lg-4 col-md-4 col-12">
+        <article class="entry" title="Aliviar stresse">
+          <div class="entry__img-container">
+            <img
+              src="img/aliviar-estres.png"
+              alt="Aliviar stresse"
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Aliviar stresse" class="entry__link btn"
+            >Aliviar stresse</a
+          >
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <article class="entry" title="Amor próprio">
+          <div class="entry__img-container">
+            <img
+              src="img/amor-propio.png"
+              alt="Amor próprio"
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Amor próprio" class="entry__link btn"
+            >Amor próprio</a
+          >
+        </article>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+        <article class="entry" title="Dormir bem ">
+          <div class="entry__img-container">
+            <img
+              src="img/dormir-bem.png"
+              alt="Dormir bem "
+              class="entry__img"
+              width="120"
+              height="120"
+            />
+          </div>
+          <a href="#" title="Dormir bem " class="entry__link btn">Dormir bem</a>
+        </article>
+      </div>
+      </section>
+    </div>
+
+    <div class="container banners">
+      
+      <article class="banner__one">
+        <img src="./img/banner-01.png" alt="Imagem Assita o video O poder do yoga" width="100%" height="auto" />
+        <div class="bannerOne__content">
+          <h3>O poder do yoga</h3>
+          <p>para melhorar a postura.</p>
+          <a href="#" title="Assita o video O poder do yoga"> Assita o video </a>
+        </div>
+      </article>
+      
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-12">
+          <article class="banner__two">
+            <img src="./img/banner-02.png" alt="" width="100%" height="auto" />
+            <div class="bannerTwo__content">
+              <h3>Um momento de paz</h3>
+              <p>para você relaxar.</p>
+              <a href="#" title="Confira">Confira</a>
+            </div>
+          </article>
+        </div> <!-- col-lg-6 col-md-6 col-12 -->
+        <div class="col-lg-6 col-md-12 col-12">
+          <article class="banner__three">
+            <img src="./img/banner-03.png" alt="" width="100%" height="auto" />
+            <div class="bannerThree__content">
+              <h3>Aulas</h3>
+              <p>para você meditar.</p>
+              <a href="#" title="Agende um horário.">Agende um horário.</a>
+            </div>
+          </article>
+        </div> <!-- col-lg-6 col-md-6 col-12 -->
+      </div> <!-- row -->
+
+      </div>
+
+    </main>
+<%- include('./partials/footer') %>
+>>>>>>> dev

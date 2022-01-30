@@ -1,43 +1,53 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors'),
+  express = require('express'),
+  path = require('path'),
+  cookieParser = require('cookie-parser'),
+  logger = require('morgan'),
+  session = require('express-session')
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var registerRouter = require('./routes/register')
+// ARQUIVOS DE ROTAS - IMPORTAÇÃO
+const indexRouter = require('./routes/index'),
+  usersRouter = require('./routes/users'),
+  adminRouter = require('./routes/admin')
 
-var app = express();
+// ARQUIVO MIDDLEWARE - IMPORTAÇÃO
+const adminMiddleware = require('./middlewares/admin')
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// APP
+const app = express()
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+// VIEW ENGINE - A PASTA DAS VIEWS E A SINTAXE (EJS)
+app.set('views', path.join(__dirname, 'views'))
+app.set('view engine', 'ejs')
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/register',registerRouter)
+app.use(logger('dev'))
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+// COOKIES E SESSION (PARSE E DEFINIÇÃO DA SESSION COM SEGREDO E TEMPO PARA EXPIRAÇÃO)
+app.use(cookieParser())
+app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 
-// error handler
-app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+// PASTA PÚBLICA PARA ARQUIVOS ESTÁTICOS (IMG, JS, CSS...)
+app.use(express.static(path.join(__dirname, 'public')))
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
+app.use('/user', usersRouter)
+app.use('/', indexRouter)
 
-module.exports = app;
+// app.use(adminMiddleware)
+
+app.use('/admin', adminRouter)
+
+app.use(function (req, res, next) {
+  next(createError(404))
+})
+
+app.use(function (err, req, res, next) {
+  res.locals.message = err.message
+  res.locals.error = req.app.get('env') === 'development' ? err : {}
+
+  res.status(err.status || 500)
+  res.render('error')
+})
+
+module.exports = app

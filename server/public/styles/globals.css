@@ -36,6 +36,10 @@ font-family: var(--font-family) !important;
 transition: all 0.5s;
 }
 
+main {
+  min-height: 80vh;
+}
+
 header {
   width: 100%;
   height: 70px;
@@ -59,6 +63,11 @@ a.nav-link {
 }
 a.nav-link:hover {
   color: var(--cor-secondary) !important;
+}
+
+a.nav-link.register {
+  display: flex;
+  align-items: center;
 }
 
 .btn-header {
@@ -119,18 +128,16 @@ input::placeholder {
 
 /* Gerais (classes) */
 .btn {
-  background-color: var(--cor-primary);
-  border: none;
-  border-radius: var(--border-radius-metade);
-  color: #fff;
-  cursor: pointer;
-  padding: var(--padding-metade) var(--padding-padrao);
-  transition: background-color 0.6s ease-in-out, border-radius 0.6s ease-in-out;
+  background-color: var(--cor-primary) !important;
+  border: none !important;
+  color: #fff !important;
+  cursor: pointer !important;
+  padding: var(--padding-metade) var(--padding-padrao) !important;
+  transition: background-color 0.6s ease-in-out, border-radius 0.6s ease-in-out !important;
 }
 
 .btn:hover {
-  background-color: var(--cor-destaque);
-  border-radius: var(--border-radius-padrao);
+  background-color: var(--cor-destaque) !important;
   color: #fff;
 }
 
@@ -312,13 +319,13 @@ footer .nav {
   display: flex;
   border-radius: var(--border-radius-padrao);
   color: var(--cor-primary);
-  flex: 1 1 150px;
   margin: 16px;
   text-align: center;
   justify-content: flex-start;
   padding: var(--padding-padrao);
   flex-flow: column nowrap;
   align-items: center;
+  min-height: 320px;
 }
 
 .categories .category .category__link {
@@ -361,7 +368,6 @@ footer .nav {
 .entries .entry {
   display: flex;
   color: var(--cor-primary);
-  flex: 1 1 150px;
   margin: 16px;
   text-align: center;
   justify-content: flex-start;
@@ -467,14 +473,19 @@ footer .nav {
   }
 }
 
-.entries .entry .entry__img-container .entry__img:hover {
-  filter: var(--sombra-prinicpal);
-}
 
 @media (max-width: 768px) {
 
   .btn-connect {
     display: none;
+  }
+
+  .search .search__form input {
+    width: 70%;
+  }
+
+  .search .search__form button.btn {
+    width: 30%;
   }
 
   div {
