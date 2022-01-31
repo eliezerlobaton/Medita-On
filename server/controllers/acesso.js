@@ -3,9 +3,13 @@ const jwt = require("../helpers/jwt")
 
 
 const controller = {
+  
   register: (req, res, next) => {
+
     res.render('register');
+
   },
+<<<<<<< HEAD
   add: async (req, res, next) => {
     try {
       const usuarios = await db.query(
@@ -39,6 +43,22 @@ const controller = {
       res.status(400).json({ error })
     }
 
+=======
+
+  add: (req, res, next) => {
+    const usuarios = fs.readFileSync(path.join(__dirname, '..', 'data', 'usuariosPlaceholder.json'), 'utf-8')
+    let usuariosNew = JSON.parse(usuarios)
+    let newUsuario = req.body
+    let newId = usuariosNew[usuariosNew.length - 1].id + 1
+    newUsuario.plano = 'Free'
+    newUsuario.criadoEm = new Date()
+    newUsuario.modificadoEm = new Date()
+    newUsuario.admin = false
+    newUsuario.id = newId
+    usuariosNew.push(newUsuario)
+    fs.writeFileSync(path.join(__dirname, '..', 'data', 'usuariosPlaceholder.json'), JSON.stringify(usuariosNew))
+    res.redirect('../../usuarios')
+>>>>>>> feature/cadastro-login-back
   },
   loginView: (req, res, next) => {
     res.render('login');
