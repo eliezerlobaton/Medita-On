@@ -1,0 +1,43 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+  
+}
+
+form {
+
+    display: inline-block;
+    width: 300px;
+    
+  
+}
+  
+
+#login{
+
+    background-color: var(--cor-diluida);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 80px;
+    border-radius: 15px;
+    color: white;
+    box-shadow: 5px 10px 20px var(--cor-primary);
+
+}
+
+#titulo{
+
+    color: var(--cor-primary);
+
+}
+
+.opcoes{
+
+    color: var(--cor-primary);
+
+}

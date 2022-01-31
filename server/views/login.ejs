@@ -1,8 +1,42 @@
 <%- include('./partials/head') %>
 <%- include('./partials/header') %>
+
 <main>
 
-  Tela de login
+  <section id = "login">
+
+    <h1 id = "titulo">Login</h1>
+
+    <form action = "/login/access" method = "POST">
+
+        <div>
+
+            <input type="email" required name="email" id = "email" placeholder="E-mail" data-email-validate>
+
+        </div>
+
+        <div>
+
+            <input type="password" required name="password" id = "senha" placeholder="Senha">
+
+        </div>
+
+        <div>
+
+            <input class="btn-header" type="submit" value="Entrar">
+
+        </div>
+
+        <div>
+
+            <p><a class = "nav-link header" href="/cadastro">Cadastre-se</a></p>
+
+        </div>
+
+    </form>
+
+</section>
 
 </main>
+
 <%- include('./partials/footer') %>

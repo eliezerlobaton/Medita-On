@@ -1,9 +1,9 @@
 const config = {
     username: "root",
-    password: "1234567890",
+    password: "root@123",
     database: "dbMeditaOn",
     host: "127.0.0.1",
-    dialect: "mysql"
-  }
-  
-module.exports = config
+    dialect: "mysql",
+};
+
+module.exports = config;

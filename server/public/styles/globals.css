@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("styleCadastro.css");
+@import url("styleLogin.css");
 
 :root {
   --cor-primary: #3f51b5;
   --cor-secondary: #c3d1f1;
   --cor-destaque: #278ba9;
-  --cor-clara: #d2ddf5;
+  --cor-clara: #02050a;
   --cor-bebe: #e1e8f8;
   --cor-diluida: #f0f4fc;
   --cor-base: #f7f9fe;
-  --font-family: 'Poppins', sans-serif;
+  --font-family: "Poppins", sans-serif;
   --fontse-tamanho-padrao: 16px;
   --padding-padrao: 16px;
   --padding-metade: calc(var(--padding-padrao) / 2);
@@ -31,9 +33,9 @@ html {
 
 /* Geral (tags HTML) */
 body {
-box-sizing: border-box;
-font-family: var(--font-family) !important;
-transition: all 0.5s;
+  box-sizing: border-box;
+  font-family: var(--font-family) !important;
+  transition: all 0.5s;
 }
 
 main {
@@ -125,7 +127,6 @@ input::placeholder {
   color: var(--cor-secondary);
 }
 
-
 /* Gerais (classes) */
 .btn {
   background-color: var(--cor-primary) !important;
@@ -155,6 +156,7 @@ input::placeholder {
   flex: 1 1 calc(100% - 264px);
   flex-flow: row nowrap;
   justify-content: flex-end;
+  color: var(--cor-principal);
 }
 
 .navbar__menu .menu__item {
@@ -173,14 +175,18 @@ input::placeholder {
 
 /* banner */
 
-.banner__one, .banner__two, .banner__three{
+.banner__one,
+.banner__two,
+.banner__three {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
 }
 
-.bannerOne__content, .bannerTwo__content, .bannerThree__content {
+.bannerOne__content,
+.bannerTwo__content,
+.bannerThree__content {
   position: absolute;
   order: 1;
   padding-left: 6rem;
@@ -192,7 +198,8 @@ input::placeholder {
   margin: 0;
 }
 
-.bannerTwo__content h3, .bannerThree__content h3 {
+.bannerTwo__content h3,
+.bannerThree__content h3 {
   font-size: 2rem;
   margin: 0;
 }
@@ -202,12 +209,15 @@ input::placeholder {
   margin: 0;
 }
 
-.bannerTwo__content p, .bannerThree__content p {
+.bannerTwo__content p,
+.bannerThree__content p {
   font-size: 1rem;
   margin: 0;
 }
 
-.bannerOne__content a, .bannerTwo__content a, .bannerThree__content a {
+.bannerOne__content a,
+.bannerTwo__content a,
+.bannerThree__content a {
   color: var(--cor-destaque);
   background-color: #ffffff;
   border-radius: 20px;
@@ -217,13 +227,158 @@ input::placeholder {
   transition: all 0.5s;
 }
 
-.bannerOne__content a:hover, .bannerTwo__content a:hover,.bannerThree__content a:hover {
+.bannerOne__content a:hover,
+.bannerTwo__content a:hover,
+.bannerThree__content a:hover {
   color: #ffffff;
   background: var(--cor-destaque);
 }
 
 .banners {
   margin-bottom: 3rem;
+}
+
+/* perfil */
+
+.seccion-perfil-usuario .perfil-usuario-body,
+.seccion-perfil-usuario {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.seccion-perfil-usuario .perfil-usuario-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada {
+  display: block;
+  position: relative;
+  width: 90%;
+  height: 17rem;
+  background: var(--cor-secondary);
+  border-radius: 0 0 20px 20px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada .boton-portada {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 25px;
+  background-color: var(--cor-secondary);
+  color: #f0f4fc;
+  cursor: pointer;
+}
+
+.seccion-perfil-usuario .perfil-usuario-portada {
+  margin-right: 1rem;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  align-items: center;
+  justify-content: center;
+  border: 7px solid #f0f4fc;
+  background-color: var(--cor-secondary);
+  border-radius: 50%;
+  box-shadow: var(--sombra-principal);
+  position: absolute;
+  bottom: -40px;
+  left: calc(50% - 90px);
+  z-index: 1;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar img {
+  width: 100%;
+  position: relative;
+  border-radius: 50%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-avatar .boton-avatar {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  border: 0;
+  background-color: #f0f4fc;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body {
+  width: 70%;
+  position: relative;
+  max-width: 750px;
+}
+
+.seccion-perfil-usuario .perfil-usuario-body .titulo {
+  display: block;
+  width: 100%;
+  font-size: 1.75em;
+  margin-bottom: 0.5rem;
+  color: var(--cor-secondary);
+}
+
+.seccion-perfil-usuario .perfil-usuario-body {
+  color: var(--cor-secondary);
+  font-size: 0.95em;
+}
+
+.tituloh4 {
+  color: var(--cor-primary);
+  font-size: 2em;
+}
+
+.seccion-perfil-usuario .perfil-usuario-footer,
+.seccion-perfil-usuario .perfil-usuario-bio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5rem 2rem;
+  background-color: var(--cor-primary);
+  border-radius: 15px;
+  width: 100%;
+}
+
+.seccion-perfil-usuario .perfil-usuario-bio {
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+.seccion-perfil-usuario .lista-datos {
+  width: 50%;
+  list-style: none;
+}
+
+.seccion-perfil-usuario .lista-datos li {
+  padding: 5px 0;
+}
+
+.seccion-perfil-usuario .lista-datos li > .icono {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.seccion-perfil-usuario {
+  margin-top: 0.5rem;
+}
+
+.campo {
+  width: 100%;
+  outline: none;
+  background-color: rgba(230, 230, 230, 0.6);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-bottom: 22px;
 }
 
 /* footer */
@@ -409,12 +564,12 @@ footer .nav {
 }
 
 .navbar-toggler:focus {
-    box-shadow: none !important;
+  box-shadow: none !important;
 }
 
 @media only screen and (max-width: 991px) {
-
-  footer p, footer .nav {
+  footer p,
+  footer .nav {
     text-align: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -429,12 +584,16 @@ footer .nav {
     margin: 0;
   }
 
-  .bannerOne__content, .bannerTwo__content, .bannerThree__content {
+  .bannerOne__content,
+  .bannerTwo__content,
+  .bannerThree__content {
     padding-left: 3rem;
   }
 
-  .bannerOne__content a, .bannerTwo__content a, .bannerThree__content a {
-    margin-top: 10px ;
+  .bannerOne__content a,
+  .bannerTwo__content a,
+  .bannerThree__content a {
+    margin-top: 10px;
   }
 
   .btn-connect {
@@ -462,7 +621,6 @@ footer .nav {
     font-size: 26px;
   }
 
-
   .categories {
     display: flex;
     flex-flow: row nowrap;
@@ -473,9 +631,7 @@ footer .nav {
   }
 }
 
-
 @media (max-width: 768px) {
-
   .btn-connect {
     display: none;
   }
@@ -491,5 +647,4 @@ footer .nav {
   div {
     color: blue;
   }
-
 }

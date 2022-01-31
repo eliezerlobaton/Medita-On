@@ -1,0 +1,1 @@
+{"version":"0.0.0","name":"server","dependencies":{"cookie-parser":{"version":"1.4.5"},"debug":{"version":"2.6.9"},"ejs":{"version":"2.6.2"},"express-session":{"version":"1.17.2"},"express":{"version":"4.16.4"},"http-errors":{"version":"1.6.3"},"jsonwebtoken":{"version":"8.5.1"},"morgan":{"version":"1.9.1"},"mysql2":{"version":"2.3.3"},"sequelize":{"version":"6.12.0-alpha.1"}}}
