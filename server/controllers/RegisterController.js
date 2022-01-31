@@ -1,30 +1,35 @@
 const { Users } = require('../models');
 
-const RegisterController = {
+const controller = {
 
-    
     index:( req, res ) => {
-        return res.render('register')
+        return res.render('register');
     },
 
-    create: async (req, res) => {
-        const { frist_name, phone, birth, last_name, email, password } = req.body;
+    create: async (req, res, next) => {
+        const { frist_name, birth, last_name, email, password } = req.body;
+
+        console.log(frist_name)
+
+        
+
 
         try {
-            let newUser = await Users.create({ frist_name, last_name, birth, email, password} );
+            const newUser = await Users.create({
+                frist_name: frist_name,
+                birth, last_name, email, password });
 
             res.status(200).json({
                 message: "Conta criada com sucesso!",
                 newUser
             });
         }catch(error){
-            res.status(200).json({
+            res.status(400).json({
                 message: "Erro ao criar conta.",
+                error,
             });
         }
     },
-
 }
 
-
-module.exports = RegisterController
+module.exports = controller;
