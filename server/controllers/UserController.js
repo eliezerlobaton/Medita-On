@@ -6,8 +6,8 @@ const controller = {
     try{
       let ListUsers = await Users.findAll();
 
-      res.status(200).json({
-        ListUsers
+      return  res.render('admin/users/index', {
+        // ListUsers,
       });
 
     }catch(error) {

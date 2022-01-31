@@ -5,6 +5,11 @@
             <main>
                 <section id="formulario">
                     <h1>Faça o seu cadastro</h1>
+                    <% if(locals.message) { %>
+                        <div class="alert alert-<% if(locals.error) { %>danger<% } else { %>success<% } %>" role="alert">
+                        <%= message %>
+                        </div>
+                    <% } %>
                      <form action="/register" method="POST"> 
 
                          <div>

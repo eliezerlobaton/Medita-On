@@ -2,6 +2,15 @@
 @import url("styleCadastro.css");
 @import url("styleLogin.css");
 
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+
+}
+
 :root {
   --cor-primary: #3f51b5;
   --cor-secondary: #c3d1f1;
