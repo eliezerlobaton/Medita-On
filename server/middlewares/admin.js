@@ -1,19 +1,22 @@
-// const admin = async (req, res, next) => {
+const { Permissions } = require('../models')
+const jwt = require('../helpers/jwt');
 
-//   let isAdmin = req.cookies.admin
-//   if (!isAdmin || isAdmin == false) {
-//     res.render('login', {
-//       titulo: 'Ops!',
-//       subtitulo: 'Você não tem permissões para ver essa tela...',
-//       usuarioLogado: req.cookies.usuario,
-//       usuarioAdmin: req.cookies.admin
-//     })
-//     return
-//   }
+const admin = async (req, res, next) => {
 
-//   next()
+    const jwService = require('jsonwebtoken')
+
+  let user = await Permissions.findOne({ where: { id_user } });
   
-//   return
-// }
+  if ((user.administrator == false) && (jwt.verifyToken(jwService))) {
+    res.render('/')
+    console.log("Voce não tem acesso a essa opção")
+    return
+  }
 
-// module.exports = admin
+  next()
+  
+  return
+
+}
+
+module.exports = admin

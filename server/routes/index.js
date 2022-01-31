@@ -4,6 +4,7 @@ const express = require('express'),
   indexController = require('../controllers/index'),
   LoginController = require('../controllers/LoginController'),
   RegisterController = require('../controllers/RegisterController')
+  // adminMiddleware = require('../middlewares/admin')
 
 // ROTA PREINCIPAL (Home)
 router.get('/', indexController.index);

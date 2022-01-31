@@ -16,7 +16,7 @@ const indexRouter = require('./routes/index')
 const adminRouter = require('./routes/admin')
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
-// const adminMiddleware = require("./middlewares/admin");
+const adminMiddleware = require("./middlewares/admin");
 
 // APP
 
@@ -28,7 +28,7 @@ app.set("view engine", "ejs");
 
 app.use('/', indexRouter)
 
-// app.use(adminMiddleware)
+app.use(adminMiddleware)
 
 app.use("/admin", adminRouter)
 
