@@ -6,8 +6,13 @@
   <section id = "login">
 
     <h1 id = "titulo">Login</h1>
+    <% if(locals.message) { %>
+        <div class="alert alert-primary" role="alert">
+        <%= message %>
+        </div>
+    <% } %>
 
-    <form action = "/login/access" method = "POST">
+    <form action = "/login" method = "POST">
 
         <div>
 
