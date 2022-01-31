@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%- include ('./partials/head.ejs') %>
 <%- include ('./partials/header.ejs') %>
 
@@ -64,3 +65,71 @@
 </main>
 
 <%- include ('./partials/footer.ejs') %>
+=======
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+            <main>
+
+                <section id="formulario">
+
+                    <h1>Faça o seu cadastro</h1>
+
+                     <form action="/register/cadastrar/" method="POST"> 
+
+                         <div>
+
+                            <label for="email">E-mail</label>
+                            <input type="email" name="email" id = "email" placeholder="Digite seu e-mail" data-email-validate>
+
+                        </div>
+
+                        <div>
+
+                            <label for="nome">Nome</label>
+                            <input type="text" name="nome" id = "nome" placeholder="Digite seu nome" data-max-length="16">
+
+                        </div>
+
+                        <div>
+
+                            <label for="sobreNome">Sobrenome</label>
+                            <input type="text" name="sobrenome" id = "sobrenome" placeholder="Digite seu sobrenome">
+
+                        </div>
+
+                        <div>
+
+                            <label for="dataNascimento">Data de nascimento</label>
+                            <input type="date" name="dataNascimento" id = "dataNascimento" min = "1930-01-01">
+
+                        </div>
+
+                        <div>
+
+                            <label for="senha">Senha</label>
+                            <input type="password" name="senha" id = "senha" placeholder="Digite sua senha">
+
+                        </div>
+
+                        <div>
+
+                            <label for="confirmaSenha">Confirmação de senha</label>
+                            <input type="password" name="confirmaSenha" id = "confirmaSenha" placeholder="Confirme a senha" data-equal="password">
+
+                        </div>
+
+                        <div>
+
+                            <input class="btn" type="submit" value="Registrar">
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+            </main>
+            <%- include('./partials/footer') %>
+            
+>>>>>>> featue/cadastro-login-recuperacaoSenha
