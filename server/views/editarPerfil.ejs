@@ -6,12 +6,12 @@
       <div class="perfil-usuario-avatar">
         <img src="/img/pic-1.png" alt="img-avatar" />
       </div>
-      <button type="button" class="boton-portada">Cambiar fundo</button>
+      <button type="button" class="boton-portada"></button>
     </div>
   </div>
   <div class="perfil-usuario-body">
     <div class="perfil-usuario-bio">
-      <h3 class="titulo">Alicia Da Silva</h3>
+      <h3 class="titulo"><%= usuario.frist_name %> <%= usuario.last_name %></h3>
       <p class="texto">
         Quando você quer alguma coisa, todo o universo conspira para que você
         realize o seu desejo.
@@ -22,46 +22,77 @@
     <div class="contatoperfil">
       <div class="meucontato"></div>
 
-      <h4 class="tituloh4">Eu sou <%= usuario.frist_name %></h4>
 
-      <form action="editar" method="post">
-        <input
-          value="<%= usuario.frist_name %>"
-          type="text"
-          class="campo"
-          placeholder="Nome"
-          name="frist_name"
-        />
-        <input
-          value="<%= usuario.last_name %>"
-          type="text"
-          class="campo"
-          placeholder="Sobrenome"
-          name="last_name"
-        />
-        <input
-          value="<%= usuario.birth %>"
-          type="text"
-          class="campo"
-          placeholder="Aniversário"
-          name="birth"
-        />
-        <input
-          value="<%= usuario.email %>"
-          type="text"
-          class="campo"
-          placeholder="Email"
-          name="email"
-        />
-        <input
-          value="<%= usuario.password %>"
-          type="text"
-          class="campo"
-          placeholder="Senha"
-          name="password"
-        />
-        <button class="btn" type="submit">Enviar</button>
-      </form>
+      <section id="dados">
+
+        <h1 class="tituloh4">Eu sou <%= usuario.frist_name %></h1>
+
+        <form action="editar" method="post">
+
+          <div>
+
+          <%= usuario.frist_name %>
+          <input
+            type="text"
+            class="campo"
+            placeholder="Nome"
+            name="frist_name"
+          />
+
+        </div>
+
+        <div>
+          <input
+            value="<%= usuario.last_name %>"
+            type="text"
+            class="campo"
+            placeholder="Sobrenome"
+            name="last_name"
+          />
+
+        </div>
+
+        <div>
+          <input
+            value="<%= usuario.birth %>"
+            type="text"
+            class="campo"
+            placeholder="Aniversário"
+            name="birth"
+          />
+
+        </div>
+
+        <div>
+          <input
+            value="<%= usuario.email %>"
+            type="text"
+            class="campo"
+            placeholder="Email"
+            name="email"
+          />
+
+        </div>
+
+        <div>
+          <input
+           
+            type="text"
+            class="campo"
+            placeholder="Senha"
+            name="password"
+          />
+        </div>
+
+        <div>
+
+          <button class="btn" type="submit">Enviar</button>
+
+        </div>
+        </form>
+
+      </section>
+
     </div>
   </div>
 </section>

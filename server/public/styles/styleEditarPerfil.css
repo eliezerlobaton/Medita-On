@@ -8,15 +8,15 @@
   
   }
   
-  body {
+  /* body {
   
     padding-top: 5vh;
     background-size: cover;
     background-position-y: -150px;
   
-  }
+  } */
   
-  main {
+  /* main {
   
     text-align: center;
     width: 100%;
@@ -24,19 +24,14 @@
     justify-content: center;
     align-items: center;
   
-  }
+  } */
   
-  form {
+  /* form {
   
-    display: block;
-    width: 100%;
+    display: inline-block;
+    width: 300px;
   
-  }
-  
-  form label {
-    display:block;
-    font-size: 20px;
-  }
+  } */
   
   form input {
     display: block;
@@ -45,7 +40,7 @@
     width: 100%;
   }
   
-  #formulario {
+  #dados {
   
     width: 500px;
     margin-left: auto;
@@ -59,7 +54,7 @@
   
   }
   
-  #formulario h1 {
+  #dados h1 {
   
     text-align: center;
     margin-bottom: 25px;
@@ -68,13 +63,6 @@
   
   }
   
-  label {
-  
-    font-weight: bold;
-    font-size: .8rem;
-    color: var(--cor-primary);
-  
-  }
   
   input {
   
@@ -88,6 +76,7 @@
   input::placeholder{
   
     color: var(--cor-secondary);
+    text-align: center;
   
   }
 

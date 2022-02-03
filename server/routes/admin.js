@@ -6,16 +6,16 @@ const express = require('express'),
   adminMiddleware = require('../middlewares/admin')
 
 
-router.get('/', PanelController.index) // index
+router.get('/', adminMiddleware, PanelController.index) // index
 
-router.get('/users', UserController.index)
+router.get('/users', adminMiddleware, UserController.index)
 
 
 router.get('/frases',  adminMiddleware, FrasesController.index) // Lista de Frases
-router.post('/frases', FrasesController.create) // Ver Frase
-router.get('/frases/:id', FrasesController.show) // Ver Frase
-router.put('/frases/:id', FrasesController.update) // Editar Frase
-router.delete('/frases/:id', FrasesController.delete) // Apagar Frase
+router.post('/frases', adminMiddleware, FrasesController.create) // Ver Frase
+router.get('/frases/:id', adminMiddleware, FrasesController.show) // Ver Frase
+router.put('/frases/:id', adminMiddleware, FrasesController.update) // Editar Frase
+router.delete('/frases/:id', adminMiddleware, FrasesController.delete) // Apagar Frase
 
 
 module.exports = router
