@@ -15,4 +15,5 @@ router.post('/login', LoginController.login);
 router.get('/register', RegisterController.index);
 router.post('/register', RegisterController.create);
 
+
 module.exports = router

@@ -14,6 +14,8 @@ app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-
 // ARQUIVOS DE ROTAS - IMPORTAÇÃO
 const indexRouter = require('./routes/index')
 const adminRouter = require('./routes/admin')
+const eventsRouter = require('./routes/events')
+
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
 // const adminMiddleware = require("./middlewares/admin");
@@ -27,6 +29,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use('/', indexRouter)
+app.use('/eventos', eventsRouter)
 
 // app.use(adminMiddleware)
 
