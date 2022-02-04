@@ -14,7 +14,8 @@ const controller = {
 
          if(user && password === user.password) {
            const token = jwt.generateToken(user.id)
-           return res.status(200).json({ token, user })
+           return res.render('index', { token })
+
 
          } else {
             return  res.render('login', {
