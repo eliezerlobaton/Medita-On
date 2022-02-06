@@ -1,0 +1,32 @@
+<%- include('./partials/head') %> 
+<%- include('./partials/header') %>
+
+    <main id="palestra">
+
+        <h1 class="tituloPalestra"> <%= event.title %> </h1>
+
+        <section id="fundoDescricao">
+
+            <p id = "descricao"> <%= event.description %> </p>
+
+        </section>
+
+        <section id="fundoInformacoes">
+
+            <h3 class="informacoes"> Palestrante: <%= event.speakers %> </h3>
+
+            <h3 class="informacoes"> Data da palestra: <%= event.confirmed_date %> </h3>
+
+            <h3 class="informacoes"> Duração: <%= event.duration %> Horas </h3>
+
+        </section>
+
+        <div id="areaButton">
+
+            <button class="btn-header mobile">Reservar</button>
+
+        </div>
+
+    </main>
+
+<%- include('./partials/footer') %>
