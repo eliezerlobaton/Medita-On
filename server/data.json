@@ -1,0 +1,58 @@
+[
+
+  {
+
+      "id": 1,
+      "title": "O poder da meditação em ambientes de alta performance",
+      "speakers": "Daniella",
+      "duration": "1:30",
+      "confirmed_date": "16/01/2022",
+      "description": "    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium."
+
+  },
+
+  {
+
+      "id": 2,
+      "title": "Tudo o que você precisa são 10 minutos consciente",
+      "speakers": "Eliezer",
+      "duration": "2",
+      "confirmed_date": "16/01/2022",
+      "description": "    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium."
+
+  },
+
+  {
+
+      "id": 3,
+      "title": "O poder da atenção plena: o que você pratica, se fortalece",
+      "speakers": "Gustavo",
+      "duration": "1:50",
+      "confirmed_date": "16/01/2022",
+      "description": "    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium."
+
+  },
+
+  {
+
+      "id": 4,
+      "title": "O que é a Kriya Yoga ?",
+      "speakers": "Matheus",
+      "duration": "2:10",
+      "confirmed_date": "16/01/2022",
+      "description": "    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium."
+
+  },
+
+  {
+
+      "id": 5,
+      "title": "Como Perdoar a Si Mesmo",
+      "speakers": "Vinicios",
+      "duration": "1:40",
+      "confirmed_date": "16/01/2022",
+      "description": "    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium.     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel soluta dolore dolores facere! Quas eum voluptates eius perferendis, quia illo repellendus soluta totam similique eos provident quisquam, vitae minima laudantium."
+
+  }
+
+]
