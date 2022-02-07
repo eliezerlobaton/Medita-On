@@ -402,25 +402,20 @@ input::placeholder {
 }
 
 .features .box-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  grid-template-columns: 40% 40% 40%;
-  align-content: center;
-  margin: 60px 20px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }
 
 .features .box-container .box {
-  align-items: center;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 3rem 2rem;
   background: var(--cor-secondary);
-  margin: 1px;
+  margin: 5px;
   text-align: center;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
 }
 
 .box h3 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1.8;
   color: var(--cor-primary);
 }
@@ -435,6 +430,17 @@ input::placeholder {
   font-size: 1.5rem;
   line-height: 1.8;
   color: var(--cor-bebe);
+}
+
+.box img {
+  margin: 1rem 0;
+  height: 15rem;
+}
+
+.box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 60%;
 }
 
 /* footer */

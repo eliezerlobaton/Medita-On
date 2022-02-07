@@ -5,14 +5,16 @@
    <div class="box-container">
     <%for(let evento of eventos) {%>
       <div class="box">
+        <img src= <%= evento.image%> >  
         <h3> <%= evento.title%>
         </h3> 
         
-        <h4> <%= evento.confirmed_date %></h4>
+        <h3> <%= evento.confirmed_date %></h3>
         <bottom class="btn"> Ver mais </bottom>
-      <%}%>
+      
       
      </div>
+     <%}%>
    </div>
  </section>
 

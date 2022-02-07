@@ -1,21 +1,19 @@
 const createError = require("http-errors"),
   express = require("express"),
-  bodyParser = require('body-parser'),
+  bodyParser = require("body-parser"),
   path = require("path"),
   cookieParser = require("cookie-parser"),
-  logger = require("morgan")
+  logger = require("morgan");
 
 const app = express();
 
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
-
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 // ARQUIVOS DE ROTAS - IMPORTAÇÃO
-const indexRouter = require('./routes/index')
-const adminRouter = require('./routes/admin')
-const eventsRouter = require('./routes/events')
-
+const indexRouter = require("./routes/index");
+const adminRouter = require("./routes/admin");
+const eventsRouter = require("./routes/events");
 
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
 // const adminMiddleware = require("./middlewares/admin");
@@ -28,12 +26,12 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
-app.use('/', indexRouter)
-app.use('/eventos', eventsRouter)
+app.use("/", indexRouter);
+app.use("/eventos", eventsRouter);
 
 // app.use(adminMiddleware)
 
-app.use("/admin", adminRouter)
+app.use("/admin", adminRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));
@@ -46,7 +44,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
-
 
 module.exports = app;
