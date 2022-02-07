@@ -1,42 +1,33 @@
-const events = require('../data/events.json')
+const events = require("../data/events.json");
 
 const controller = {
-
   index: (req, res, next) => {
-    try{
-      res.status(200).json({
-        result: 'succes',
-        events,
-      })
-    }catch(err){
+    try {
+      res.render("eventosdivididos", { eventos: events });
+    } catch (err) {
       res.status(400).json({
-        result: 'error',
+        result: "error",
         err,
-      })
+      });
     }
   },
 
   show: async (req, res, next) => {
-
     const { id } = req.params;
 
-    const event = events[id - 1]
-    
-    try{
+    const event = events[id - 1];
 
-      res.render('eventDetails', {
-
-        event
-
-      })
-
-    } catch(err){
+    try {
+      res.render("eventDetails", {
+        event,
+      });
+    } catch (err) {
       res.status(400).json({
-        result: 'error',
+        result: "error",
         err,
-      })
+      });
     }
-  }
-}
+  },
+};
 
-module.exports = controller
+module.exports = controller;
