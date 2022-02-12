@@ -10,7 +10,8 @@ const indexRouter = require('./routes/index');
 const adminRouter = require('./routes/admin');
   
 // ARQUIVO MIDDLEWARE - IMPORTAÇÃO
-// const adminMiddleware = require("./middlewares/admin");
+const adminMiddleware = require("./middlewares/admin");
+const authMiddleware = require("./middlewares/auth");
   
 // APP
 const app = express();
@@ -32,7 +33,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use('/', indexRouter);
 
 
-// app.use(adminMiddleware);
+app.use(adminMiddleware);
 
 app.use("/admin", adminRouter);
 

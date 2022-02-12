@@ -1,8 +1,8 @@
 const config = {
-    username: "root",
-    password: "root",
+    username: "vinicios",
+    password: "c@t!7rkvl9",
     database: "dbMeditaOn",
-    host: "127.0.0.1",
+    host: "192.168.15.220",
     dialect: "mysql",
 };
 

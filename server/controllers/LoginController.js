@@ -1,31 +1,33 @@
 // const { Users } = require('../models');
-// const jwt = require('../helpers/jwt');
 
-// const controller = {
+const controller = {
 
-//     index:(req,res) =>{
-//         return res.render('login');
-//     },
+    // index:(req,res) =>{
+    //     return res.render('login');
+    // },
 
-//     login: async (req, res, next) => {
-//         const { email, password } = req.body;
-         
-//         let user = await Users.findOne({ attributes: { exclude: [ password ]}, where: { email } })
+    login: async (req, res, next) => {
+  
+        res.render('login', {
 
-//          if(user && password === user.password) {
-//            const token = jwt.generateToken(user.id)
-//            return res.render('index', { token })
+            usuarioLogado: req.cookies.usuario,
+            usuarioAdmin: req.cookies.admin
 
+        })
 
-//          } else {
-//             return  res.render('login', {
-//                 error: "error",
-//                 message: 'Usuário ou senha inválidos.',
-//             });
+    },
 
-//          }
+    auth: (req, res, next) => {
 
-//     },
-// }
+        const {user} = req.user;
 
-// module.exports = controller;
+        res.redirect('index', {
+
+            user: user
+
+        })
+    
+    }
+}
+
+module.exports = controller;
