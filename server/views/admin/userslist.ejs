@@ -1,0 +1,28 @@
+<%- include('../partials/head') %>
+<%- include('../partials/admin/header') %>
+
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">E-mail</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% ListUsers.forEach(function(usuario) { %>
+      <tr>
+        <th scope="row"><%= usuario.id %></th>
+        <td><%= usuario.frist_name %></td>
+        <td><%= usuario.last_name %></td>
+        <td><%= usuario.email %></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+<%- include('../partials/admin/footer') %>

@@ -26,19 +26,14 @@
   
   }
   
-  form {
   
-    display: inline-block;
-    width: 300px;
-  
-  }
   
   form label {
     display:block;
     font-size: 20px;
   }
   
-  form input {
+  form .full {
     display: block;
     margin: 0 0 20px;
     padding: 10px 25px;

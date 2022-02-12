@@ -9,8 +9,8 @@
 
 form {
 
-    display: inline-block;
-    width: 300px;
+    display: block;
+    width: 100%;
     
   
 }
