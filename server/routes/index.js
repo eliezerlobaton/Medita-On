@@ -10,11 +10,11 @@ const express = require('express'),
 router.get('/', indexController.index);
 
 // // Formulários
-router.get('/login', LoginController.index);
-router.post('/login', LoginController.login);
+// router.get('/login', LoginController.index);
+// router.post('/login', LoginController.login);
 
-router.get('/register', RegisterController.index);
-router.post('/register', RegisterController.create);
+// router.get('/register', RegisterController.index);
+// router.post('/register', RegisterController.create);
 
 router.get("/edit-perfil", UserController.editPerfil);
 router.put("/edit-profile/:id", UserController.editProfile);
