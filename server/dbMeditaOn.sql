@@ -10,7 +10,7 @@ CREATE TABLE users(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     frist_name VARCHAR(50) NOT NULL,
     last_name VARCHAR(50) NOT NULL,
-    birth DATE DEFAULT(NULL),
+    birth DATE T(NULL),
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(50) NOT NULL
 

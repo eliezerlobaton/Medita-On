@@ -16,9 +16,9 @@ router.get('/', indexController.index);
 // router.get('/register', RegisterController.index);
 // router.post('/register', RegisterController.create);
 
-// router.get("/edit-perfil", UserController.editPerfil);
-// router.put("/edit-profile/:id", UserController.editProfile);
-// router.post("/editar", UserController.editar);
-// // router.get("/:id", UserController.show);
+router.get("/edit-perfil", UserController.editPerfil);
+router.put("/edit-profile/:id", UserController.editProfile);
+router.post("/editar", UserController.editar);
+router.get("/user/:id", UserController.show);
 
 module.exports = router

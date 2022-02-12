@@ -1,5 +1,6 @@
-const { sign, verify } = require("jsonwebtoken");
-const secrety = "secret";
+const jwt = require('jsonwebtoken');
+const { Users } = require('../models');
+
 const jwt = {
   generateToken: (user_id) => {
     return sign({}, secrety, {
