@@ -4,14 +4,15 @@ const express = require('express'),
   indexController = require('../controllers/index'),
   LoginController = require('../controllers/LoginController'),
   RegisterController = require('../controllers/RegisterController'),
-  UserController = require('../controllers/UserController')
+  UserController = require('../controllers/UserController'),
+  authMiddleware = require('../middlewares/auth')
 
 // ROTA PREINCIPAL (Home)
 router.get('/', indexController.index);
 
 // // Formulários
-router.get('/login', LoginController.index);
-router.post('/login', LoginController.login);
+router.get('/login', LoginController.login);
+router.post('/login', authMiddleware, LoginController.auth);
 
 router.get('/register', RegisterController.index);
 router.post('/register', RegisterController.create);

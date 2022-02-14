@@ -1,4 +1,4 @@
-const { Users, Permissions } = require('../models');
+const { Users } = require('../models');
 
 const controller = {
 
@@ -17,12 +17,6 @@ const controller = {
                 const newUser = await Users.create({
                     frist_name: frist_name,
                     birth, last_name, email, password });
-    
-                const newPermission = await Permissions.create({
-                    id_user: newUser.id,
-                    administrator: true,
-                    speaker: false
-                })
     
                 res.render('login', {
                     message: 'Conta criada com sucesso!',
