@@ -1,4 +1,4 @@
-const events = require('../data.js')
+const events = require('../data.json')
 
 const controller = {
 
@@ -16,16 +16,20 @@ const controller = {
     }
   },
 
-  show: (req, res, next) => {
+  show: async (req, res, next) => {
+
     const { id } = req.params;
-    let event = events.filter( event => event.id == id ); 
+
+    const event = events[id - 1]
     
     try{
-      res.status(200).json({
-        result: 'succes',
-        event,
-        
+
+      res.render('eventDetails', {
+
+        event
+
       })
+
     } catch(err){
       res.status(400).json({
         result: 'error',
