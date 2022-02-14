@@ -5,13 +5,9 @@ const createError = require("http-errors"),
   logger = require("morgan"),
   session = require("express-session");
 
-// ARQUIVOS DE ROTAS - IMPORTAÇÃO
-const indexRouter = require('./routes/index');
-const adminRouter = require('./routes/admin');
-  
-// ARQUIVO MIDDLEWARE - IMPORTAÇÃO
-const adminMiddleware = require("./middlewares/admin");
-const authMiddleware = require("./middlewares/auth");
+const indexRouter = require('./routes/index')
+const adminRouter = require('./routes/admin')
+const eventsRouter = require('./routes/events')
   
 // APP
 const app = express();
@@ -31,10 +27,9 @@ app.use(session({ secret: 'QWhNdWxla2U=', cookie: { maxAge: 60000 } }))
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use('/', indexRouter);
+app.use('/eventos', eventsRouter)
 
-
-app.use(adminMiddleware);
-
+// app.use(adminMiddleware);
 app.use("/admin", adminRouter);
 
 app.use(function (req, res, next) {
@@ -48,7 +43,5 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
-
 
 module.exports = app;
