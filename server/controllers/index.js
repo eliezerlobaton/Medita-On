@@ -1,6 +1,11 @@
+const { events } = require('../data.js')
+
 const controller = {
-  index: (req, res, next) => {
-    res.render('index');
+  
+  index: (req, res) => {
+    res.render('index', {
+      events,
+    });
   },
 }
 
