@@ -2,7 +2,7 @@ const express = require('express'),
   router = express.Router(),
   FrasesController = require('../controllers/FrasesController'),
   PanelController = require('../controllers/PanelController'),
-  UserController = require('../controllers/UserController')
+  UserController = require('../controllers/UserController'),
   adminMiddleware = require('../middlewares/admin')
 
 
