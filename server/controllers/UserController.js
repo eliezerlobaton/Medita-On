@@ -3,12 +3,19 @@ const { Users } = require('../models');
 const controller = {
 
   index: async (req, res) => {
-    const users = await Users.findAll();
-    res.render('index', {
-      users: users,
-      usuarioLogado: req.cookies.usuario,
-      usuarioAdmin: req.cookies.admin
-    });
+    try{
+      let ListUsers = await Users.findAll();
+
+      return  res.render('admin/userslist', {
+        ListUsers 
+      });
+
+    }catch(error) {
+      res.status(400).json({
+        result: error,
+        message: "Não foi possível listar os usuários."
+      });
+    }
   },
 
   show: async (req, res, next) => {
@@ -18,10 +25,8 @@ const controller = {
       let Profile = await Users.findOne({ where: { id } });
 
       if (Profile) {
-        res.render('user', {
-          Profile,
-          usuarioLogado: req.cookies.usuario,
-          usuarioAdmin: req.cookies.admin
+        res.status(200).json({
+          Profile
         });
       } else {
         res.status(404).json({
@@ -37,25 +42,6 @@ const controller = {
       });
     }
   },
-
-  list: async (req, res) => {
-   const Users = await Users.findAll();
-   let admin = req.cookies.admin;
-   if(!admin || admin === false){
-      res.render('usuarios', {
-        Users,
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-      });
-    }else{
-      res.render('admin/userslist', {
-        Users,
-        usuarioLogado: req.cookies.usuario,
-        usuarioAdmin: req.cookies.admin
-      });
-    }
-  },
-
 
   create: async (req, res) => {
     const { frist_name, last_name, birth, email, password } = req.body;

@@ -17,6 +17,10 @@
           <a class="btn-header mobile" href="/login">Conectar</a>
         </div>
       </div>
+      <% if(locals.usuarioLogado && locals.usuarioLogado.isAdmin) { %>
+        <nav class="nav nav--admin">
+          <a class="btn-header" href="/admin/usuarios">Lita de usuários</a>
+        </nav>
       <div class="btn-connect justify-content-end">
         <div class="navbar-nav">
           <a class="nav-link register" href="/register">Cadastre-se</a>
