@@ -1,4 +1,4 @@
-const { events } = require('../data.js')
+const { events } = require('../data.json')
 
 const controller = {
   
