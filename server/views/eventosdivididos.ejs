@@ -1,0 +1,22 @@
+<%- include('./partials/head') %> <%- include('./partials/header') %>
+ <section class="features" id="features">
+   <h4 class="tituloevento">Palestras</h1>
+
+   <div class="box-container">
+    <%for(let evento of eventos) {%>
+      <div class="box">
+        <img src= <%= evento.image%> >  
+        <h3> <%= evento.title%>
+        </h3> 
+        
+        <h3> <%= evento.confirmed_date %></h3>
+        
+      <a href="eventos/<%= evento.id %>" class="btn">Ver mais</a>
+      
+     </div>
+     <%}%>
+   </div>
+ </section>
+
+ <%- include('./partials/footer') %>
+ 
