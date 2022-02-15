@@ -2,13 +2,13 @@ const express = require('express'),
   router = express.Router(),
   FrasesController = require('../controllers/FrasesController'),
   PanelController = require('../controllers/PanelController'),
-  UserController = require('../controllers/UserController')
+  UserController = require('../controllers/UserController'),
   adminMiddleware = require('../middlewares/admin')
 
 
 router.get('/', adminMiddleware, PanelController.index) // index
 
-router.get('/userslist', adminMiddleware, UserController.index);
+router.get('/usuarios', adminMiddleware, UserController.index) // index);
 
 
 router.get('/frases', adminMiddleware, FrasesController.index) // Lista de Frases

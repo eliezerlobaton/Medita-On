@@ -5,9 +5,15 @@ const createError = require("http-errors"),
   logger = require("morgan"),
   session = require("express-session");
 
-const indexRouter = require('./routes/index')
-const adminRouter = require('./routes/admin')
+// ARQUIVOS DE ROTAS - IMPORTAÇÃO
+const indexRouter = require('./routes/index');
+const adminRouter = require('./routes/admin');
 const eventsRouter = require('./routes/events')
+  
+// ARQUIVO MIDDLEWARE - IMPORTAÇÃO
+const adminMiddleware = require("./middlewares/admin");
+const authMiddleware = require("./middlewares/auth");
+
   
 // APP
 const app = express();
@@ -29,7 +35,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use('/', indexRouter);
 app.use('/eventos', eventsRouter)
 
-// app.use(adminMiddleware);
+app.use(adminMiddleware);
+
 app.use("/admin", adminRouter);
 
 app.use(function (req, res, next) {

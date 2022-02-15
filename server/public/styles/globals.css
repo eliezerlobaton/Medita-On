@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("styleCadastro.css");
 @import url("styleLogin.css");
+@import url("styleEventDetails.css");
 
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica, sans-serif;
-
 }
 
 :root {
@@ -47,6 +46,10 @@ body {
   transition: all 0.5s;
 }
 
+body:not(.admin) .nav--admin {
+  display: none;
+}
+
 main {
   min-height: 80vh;
 }
@@ -79,6 +82,10 @@ a.nav-link:hover {
 a.nav-link.register {
   display: flex;
   align-items: center;
+}
+
+.nav--admin.nav {
+  order: 2;
 }
 
 .btn-header {
@@ -389,6 +396,60 @@ input::placeholder {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin-bottom: 22px;
+}
+
+/*eventosdetalhes*/
+
+.tituloevento {
+  position: relative;
+  padding: 0 0 10px;
+  margin-bottom: 10px;
+  color: var(--cor-primary);
+  font-size: 3rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}
+
+.features .box-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.features .box-container .box {
+  padding: 3rem 2rem;
+  background: var(--cor-secondary);
+  margin: 5px;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.box h3 {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cor-primary);
+}
+
+.box p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--cor-primary);
+}
+
+.box-container .box h4 {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--cor-bebe);
+}
+
+.box img {
+  margin: 1rem 0;
+  height: 15rem;
+}
+
+.box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 60%;
 }
 
 /* footer */
