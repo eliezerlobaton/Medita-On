@@ -14,12 +14,12 @@ router.get('/', indexController.index);
 router.get('/login', LoginController.login);
 router.post('/login', authMiddleware, LoginController.auth);
 
-// router.get('/register', RegisterController.index);
-// router.post('/register', RegisterController.create);
+router.get('/register', RegisterController.index);
+router.post('/register', RegisterController.create);
 
 router.get("/edit-perfil", UserController.editPerfil);
 router.put("/edit-profile/:id", UserController.editProfile);
 router.post("/editar", UserController.editar);
-router.get("/user/:id", UserController.show);
+router.get("/profile", UserController.show);
 
 module.exports = router

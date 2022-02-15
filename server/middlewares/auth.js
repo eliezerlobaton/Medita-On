@@ -12,48 +12,21 @@ const auth = async (req, res, next) => {
   // BUSCA POR USUÁRIO RELACIONADO AOS DADOS ENVIADOS
   const user = await Users.findOne({where:{ email, password }});
 
-  try{
-  
-    if(user){
+  // VERIFICAÇÃO DE USUÁRIO E SENHA
+  if(!user) {
+    return res.render('login', {
+      error: 'Usuário ou senha inválidos',
+      usuarioLogado: req.cookies.usuario,
+      usuarioAdmin: req.cookies.admin
+    })
+  } else {
+    // COOKIES
+    res.cookie('usuario', user.email)
+    res.cookie('admin', user.admin)
 
-      if(user.administrator){
+  } 
 
-        res.cookie('admin', user.administrator)
-
-      }
-
-      else{
-
-        res.cookie('usuario', user)
-
-      }
-
-      res.render('index')
-
-    }
-
-    else{
-
-      res.render('login',{
-
-        message: "Usuario invalido",
-        usuarioLogado: req.cookies.usuario,
-        usuarioLogado: req.cookies.admin
-  
-  
-      })
-
-    }
-
-  }
-
-  catch(err){
-
-    res.send("EITA!!!")
-
-
-  }
-
+ 
   next()
 
   return

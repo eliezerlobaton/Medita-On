@@ -18,15 +18,10 @@
         </div>
       </div>
       <div class="btn-connect justify-content-end">
-        <% if(locals.user) { %>
-          <a class="nav-link register" href="/profile">Olá, <%= user.frist_name %> <%= user.last_name %></a>
-          
-        <% } else { %>
-          <div class="navbar-nav">
-            <a class="nav-link register" href="/register">Cadastre-se</a>
-            <a class="btn-header" href="/login">Conectar</a>
-          </div>
-        <% } %>
+        <div class="navbar-nav">
+          <a class="nav-link register" href="/register">Cadastre-se</a>
+          <a class="btn-header" href="/login">Conectar</a>
+        </div>
       </div>
     </div>
   </nav>

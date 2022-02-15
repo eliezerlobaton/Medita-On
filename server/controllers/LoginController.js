@@ -2,9 +2,6 @@
 
 const controller = {
 
-    // index:(req,res) =>{
-    //     return res.render('login');
-    // },
 
     login: async (req, res, next) => {
   
@@ -19,13 +16,7 @@ const controller = {
 
     auth: (req, res, next) => {
 
-        const {user} = req.user;
-
-        res.redirect('index', {
-
-            user: user
-
-        })
+        res.redirect('../');
     
     }
 }

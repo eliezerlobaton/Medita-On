@@ -8,7 +8,7 @@ const express = require('express'),
 
 router.get('/', adminMiddleware, PanelController.index) // index
 
-router.get('/userslist', adminMiddleware, UserController.index);
+router.get('/usuarios', adminMiddleware, UserController.list);
 
 
 router.get('/frases', adminMiddleware, FrasesController.index) // Lista de Frases
