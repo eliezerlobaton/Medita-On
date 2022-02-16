@@ -1,4 +1,5 @@
-<%- include('./partials/head') %> <%- include('./partials/header') %>
+<%- include('./partials/head') %> 
+<%- include('./partials/header') %>
 <section class="seccion-perfil-usuario">
   <div class="perfil-usuario-header">
     <div class="perfil-usuario-portada">
@@ -10,7 +11,7 @@
   </div>
   <div class="perfil-usuario-body">
     <div class="perfil-usuario-bio">
-      <h3 class="titulo">Alicia Da Silva</h3>
+      <h3 class="titulo"> <%= usuarioLogado.frist_name %>  <%= usuarioLogado.last_name %></h3>
       <p class="texto">
         Quando você quer alguma coisa, todo o universo conspira para que você
         realize o seu desejo.
@@ -21,39 +22,39 @@
     <div class="contatoperfil">
       <div class="meucontato"></div>
 
-      <h4 class="tituloh4">Eu sou <%= usuario.frist_name %></h4>
+      <h4 class="tituloh4">Eu sou <%= usuarioLogado.frist_name %></h4>
 
       <form action="editar" method="post">
         <input
-          value="<%= usuario.frist_name %>"
+          value="<%= usuarioLogado.frist_name %>"
           type="text"
           class="campo full"
           placeholder="Nome"
           name="frist_name"
         />
         <input
-          value="<%= usuario.last_name %>"
+          value="<%= usuarioLogado.last_name %>"
           type="text"
           class="campo full"
           placeholder="Sobrenome"
           name="last_name"
         />
         <input
-          value="<%= usuario.birth %>"
+          value="<%= usuarioLogado.birth %>"
           type="text"
           class="campo full"
           placeholder="Aniversário"
           name="birth"
         />
         <input
-          value="<%= usuario.email %>"
+          value="<%= usuarioLogado.email %>"
           type="text"
           class="campo"
           placeholder="Email"
           name="email"
         />
         <input
-          value="<%= usuario.password %>"
+          value="<%= usuarioLogado.password %>"
           type="text"
           class="campo"
           placeholder="Senha"

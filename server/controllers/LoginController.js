@@ -8,7 +8,7 @@ const controller = {
         res.render('login', {
 
             usuarioLogado: req.cookies.usuario,
-            usuarioAdmin: req.cookies.admin
+            // usuarioAdmin: req.cookies.admin
 
         })
 
@@ -18,7 +18,11 @@ const controller = {
 
         res.redirect('../');
     
-    }
+    },
+
+    logout: (req, res, next) => {
+        res.clearCookie('usuario').clearCookie('admin').redirect('../../')
+      }
 }
 
 module.exports = controller;

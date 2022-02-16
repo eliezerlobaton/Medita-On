@@ -7,7 +7,9 @@ const controller = {
       let ListUsers = await Users.findAll();
 
       return  res.render('admin/userslist', {
-        ListUsers 
+        ListUsers,
+        usuarioLogado: req.cookies.usuario,
+        // usuarioLogado: req.cookies.admin
       });
 
     }catch(error) {
@@ -26,7 +28,9 @@ const controller = {
 
       if (Profile) {
         res.status(200).json({
-          Profile
+          Profile,
+          usuarioLogado: req.cookies.usuario,
+          usuarioLogado: req.cookies.admin
         });
       } else {
         res.status(404).json({
@@ -120,11 +124,11 @@ const controller = {
 
   editPerfil: async (req, res) => {
     try {
-      let Profile = await Users.findOne({ where: { id: 1 } });
+      let Profile = await Users.findOne({ where: { id: req.cookies.usuario.id } });
       console.log(Profile);
 
       if (Profile) {
-        res.render("editarPerfil", { usuario: Profile });
+        res.render("editarPerfil", { usuarioLogado: Profile });
       } else {
         res.status(404).json({
           result: "success",
@@ -153,7 +157,7 @@ const controller = {
           email,
           password,
         },
-        { where: { id: 1 } }
+        { where: { id: req.cookies.usuario.id } }
       );
 
       if (user) {

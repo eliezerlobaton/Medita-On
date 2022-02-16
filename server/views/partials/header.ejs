@@ -15,18 +15,25 @@
           <a class="nav-link header" href="#">Om</a>
           <a class="nav-link header" href="#">Refletir</a>
           <a class="btn-header mobile" href="/login">Conectar</a>
+          <% if(locals.usuarioLogado && locals.usuarioLogado && usuarioLogado.administrator) { %>
+            <nav class="nav nav--admin">
+              <a class="btn-header" href="/admin/usuarios">Lita de usuários</a>
+            </nav>
+          <% } %>
         </div>
       </div>
-      <% if(locals.usuarioLogado && locals.usuarioLogado.isAdmin) { %>
-        <nav class="nav nav--admin">
-          <a class="btn-header" href="/admin/usuarios">Lita de usuários</a>
-        </nav>
-      <div class="btn-connect justify-content-end">
-        <div class="navbar-nav">
-          <a class="nav-link register" href="/register">Cadastre-se</a>
-          <a class="btn-header" href="/login">Conectar</a>
+     
+      <% if (locals.usuarioLogado) { %>
+        <a  class="nav-link register" href="/edit-perfil">Olá, <%= usuarioLogado.frist_name %></a>
+        <a class="btn-header" href="/logout">Sair</a>
+      <% } else { %>
+        <div class="btn-connect justify-content-end">
+          <div class="navbar-nav">
+            <a class="nav-link register" href="/register">Cadastre-se</a>
+            <a class="btn-header" href="/login">Conectar</a>
+          </div>
         </div>
-      </div>
+      <% } %>
     </div>
   </nav>
 </header>

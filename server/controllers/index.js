@@ -4,11 +4,11 @@ const { Users } = require('../models')
 const controller = {
   
   index: (req, res) => {
+    console.log('req.cookies.usuario: ', req.cookies.usuario)
     res.render('index', {
       events,
-      Users: Users,
       usuarioLogado: req.cookies.usuario,
-      usuarioLogado: req.cookies.admin
+      // usuarioAdmin: req.cookies.admin
     });
   },
 }

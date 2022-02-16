@@ -10,25 +10,28 @@ const auth = async (req, res, next) => {
   const { email, password } = await req.body
 
   // BUSCA POR USUÁRIO RELACIONADO AOS DADOS ENVIADOS
-  const user = await Users.findOne({where:{ email, password }});
+  const usuarioLogado = await Users.findOne({where:{ email, password }});
 
   try{
   
-    if(user){
+    if(usuarioLogado){
+      console.log('usuarioLogado: ', usuarioLogado)
+      // if(usuarioLogado.administrator){
 
-      if(user.administrator){
+      //   res.cookie('admin', usuarioLogado.administrator)
 
-        res.cookie('admin', user.administrator)
+      // }
 
-      }
+      // else{
 
-      else{
+        res.cookie('usuario', usuarioLogado)
 
-        res.cookie('usuario', user)
+      // }
 
-      }
-
-      res.render('index')
+      res.render('index',{
+        usuarioLogado: usuarioLogado,
+        // usuarioAdmin: req.cookies.admin
+      })
 
     }
 
@@ -38,7 +41,7 @@ const auth = async (req, res, next) => {
 
         message: "Usuario invalido",
         usuarioLogado: req.cookies.usuario,
-        usuarioLogado: req.cookies.admin
+        // usuarioAdmin: req.cookies.admin
   
   
       })
