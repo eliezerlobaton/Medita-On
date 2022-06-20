@@ -7,10 +7,10 @@ const express = require('express'),
   UserController = require('../controllers/UserController'),
   authMiddleware = require('../middlewares/auth')
 
-// ROTA PREINCIPAL (Home)
+// ROTA PRINCIPAL (Home)
 router.get('/', indexController.index);
 
-// // Formulários
+// Formulários
 router.get('/login', LoginController.login);
 router.post('/login', authMiddleware, LoginController.auth);
 router.get('/logout', LoginController.logout);

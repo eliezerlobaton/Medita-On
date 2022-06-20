@@ -1,6 +1,6 @@
 const config = {
     username: "root",
-    password: "root",
+    password: "19323651",
     database: "dbMeditaOn",
     host: "localhost",
     dialect: "mysql",

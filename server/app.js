@@ -36,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/eventos', eventsRouter)
 
 app.use(adminMiddleware);
+app.use(authMiddleware);
 
 app.use("/admin", adminRouter);
 
